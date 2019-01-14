@@ -33,7 +33,6 @@ public class Account_01_register_login {
 		goURL("http://demo.guru99.com");
 		WebElement nameInput = driver.findElement(By.xpath("//input[@name='emailid']"));
 		nameInput.sendKeys("testserverbank02@gmail.com");
-		//input[@name='btnLogin']
 		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
 		name = driver.findElement(By.xpath("//td[contains(text(),'User ID')]/following-sibling::td")).getText().toString();
 		password = driver.findElement(By.xpath("//td[contains(text(),'Password')]/following-sibling::td")).getText().toString();
