@@ -47,7 +47,6 @@ public class Account_01_register_login {
 		nameInput.sendKeys(name);
 		WebElement passInput = driver.findElement(By.xpath("//input[@name='password']"));
 		passInput.sendKeys(password);
-		//input[@name='btnLogin']
 		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
 		Thread.sleep(1000);
 		Assert.assertTrue(driver.findElement(By.xpath("//marquee[contains(text(),'Welcome To Manager')]")).isDisplayed());
