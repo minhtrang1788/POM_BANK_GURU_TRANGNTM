@@ -7,6 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -25,8 +26,13 @@ import org.testng.Assert;
 public class AbstractPage {
 	WebDriver driver;
 
-	public void getTitle(String url) {
+	public void setDriver(WebDriver driverUse)
+	{
+		driver = driverUse;
+	}
+	public void goURL(String url) {
 		driver.get(url);
+		
 
 	}
 
@@ -364,6 +370,20 @@ public class AbstractPage {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
+	
+	public static String getEmailString() {
+	      String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+	      StringBuilder salt = new StringBuilder();
+	      Random rnd = new Random();
+	      while (salt.length() < 10) { // length of the random string.
+	          int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+	          salt.append(SALTCHARS.charAt(index));
+	      }
+	      String saltStr = salt.toString()+ "@example.com";
+	      return saltStr;
+
+	  }
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

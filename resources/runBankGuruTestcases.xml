@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
-  <test name="Test">
-    <classes>
-      <class name="com.bankguru.account.Account_01_register_login"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite" parallel="tests" thread-count="3">
+	<test name="Test on firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class
+				name="com.bankguru.account.Register_Login_Level2_AbstractPage_MultiBrowser" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test on chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class
+				name="com.bankguru.account.Register_Login_Level2_AbstractPage_MultiBrowser" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test on chrome headless">
+		<parameter name="browser" value="chromeheadless" />
+		<classes>
+			<class
+				name="com.bankguru.account.Register_Login_Level2_AbstractPage_MultiBrowser" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

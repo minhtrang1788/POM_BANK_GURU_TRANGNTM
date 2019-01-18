@@ -1,18 +1,25 @@
 package com.bankguru.account;
 
 import org.testng.annotations.Test;
+
+import common.AbstractPage;
+import common.AbstractTest;
+
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class Account_01_register_login {
+public class Register_Login_Level1_Step_By_Step extends AbstractTest {
 
 	WebDriver driver;
 	private String name;
@@ -33,7 +40,8 @@ public class Account_01_register_login {
 		goURL("http://demo.guru99.com");
 		WebElement nameInput = driver.findElement(By.xpath("//input[@name='emailid']"));
 		nameInput.sendKeys("testserverbank02@gmail.com");
-		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+		//input[@name='btnLogin']
+		driver.findElement(By.xpath("input[@name='btnLogin']")).click();
 		name = driver.findElement(By.xpath("//td[contains(text(),'User ID')]/following-sibling::td")).getText().toString();
 		password = driver.findElement(By.xpath("//td[contains(text(),'Password')]/following-sibling::td")).getText().toString();
 		
@@ -46,7 +54,8 @@ public class Account_01_register_login {
 		nameInput.sendKeys(name);
 		WebElement passInput = driver.findElement(By.xpath("//input[@name='password']"));
 		passInput.sendKeys(password);
-		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+		//input[@name='btnLogin']
+		driver.findElement(By.xpath("input[@name='btnLogin']")).click();
 		Thread.sleep(1000);
 		Assert.assertTrue(driver.findElement(By.xpath("//marquee[contains(text(),'Welcome To Manager')]")).isDisplayed());
 		
