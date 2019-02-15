@@ -26,6 +26,8 @@ public class AbstractTest {
 			options.addArguments("window-size=1366x768");
 			driver = new ChromeDriver(options);
 		}
+		System.out.println("driver4444444444444");
+		System.out.println("driver1"+driver);
 		return driver;
 	}
 }

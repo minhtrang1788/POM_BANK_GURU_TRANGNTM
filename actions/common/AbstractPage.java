@@ -30,7 +30,11 @@ public class AbstractPage {
 	{
 		driver = driverUse;
 	}
-	public void goURL(String url) {
+	public WebDriver getDriver()
+	{
+		return driver;
+	}
+	public void goURLLink(String url) {
 		driver.get(url);
 		
 

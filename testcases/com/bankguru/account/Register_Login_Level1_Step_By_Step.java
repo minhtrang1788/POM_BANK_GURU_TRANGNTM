@@ -24,6 +24,7 @@ public class Register_Login_Level1_Step_By_Step extends AbstractTest {
 	WebDriver driver;
 	private String name;
 	private String password;
+	private String loginLink;
 	@BeforeClass
 	public void beforeClass() {
 		driver = new FirefoxDriver();
@@ -37,7 +38,11 @@ public class Register_Login_Level1_Step_By_Step extends AbstractTest {
 	}
 	@Test
 	public void TC_01_register() {
-		goURL("http://demo.guru99.com");
+		
+		goURL("http://demo.guru99.com/v4/index.php");
+		loginLink = driver.getCurrentUrl();
+		driver.findElement(By.xpath("//a[text()='here']")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//input[@name='emailid']")).isDisplayed());
 		WebElement nameInput = driver.findElement(By.xpath("//input[@name='emailid']"));
 		nameInput.sendKeys("testserverbank02@gmail.com");
 		//input[@name='btnLogin']
@@ -49,7 +54,7 @@ public class Register_Login_Level1_Step_By_Step extends AbstractTest {
 	
 	@Test
 	public void TC_02_Login() throws InterruptedException {
-		goURL("http://demo.guru99.com/v4/index.php");
+		goURL(loginLink);
 		WebElement nameInput = driver.findElement(By.xpath("//input[@name='uid']"));
 		nameInput.sendKeys(name);
 		WebElement passInput = driver.findElement(By.xpath("//input[@name='password']"));
