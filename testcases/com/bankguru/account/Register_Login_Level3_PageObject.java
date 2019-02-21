@@ -48,7 +48,7 @@ public class Register_Login_Level3_PageObject extends AbstractTest {
 		loginPageObject.InputPassword(password);
 		homePageObject = loginPageObject.clickButtonLogin();
 		Thread.sleep(1000);
-		homePageObject.checkDisplayedText();
+		homePageObject.isDispledHomePage();
 
 	}
 

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageUI.Constants;
-import pageUI.registerPageUI;
+import pageUI.RegisterPageUI;
 
 public class RegisterPageObject extends AbstractPage{
 	
@@ -38,27 +38,27 @@ public class RegisterPageObject extends AbstractPage{
 	
 	
 	public void InputEmail( ) {
-		waitForControlVisible(registerPageUI.EMAIL_INPUT);
-		inputTextbox(registerPageUI.EMAIL_INPUT,getEmailString());
+		waitForControlVisible(RegisterPageUI.EMAIL_INPUT);
+		inputTextbox(RegisterPageUI.EMAIL_INPUT,getEmailString());
 	}
 	
 	
 	public void clickButtonRegister() {
-		waitForControlVisible(registerPageUI.REGISTER_BUTTON);
-		clickToElement(registerPageUI.REGISTER_BUTTON);
+		waitForControlVisible(RegisterPageUI.REGISTER_BUTTON);
+		clickToElement(RegisterPageUI.REGISTER_BUTTON);
 	}
 	public void clickHere() {
 		driver.findElement(By.xpath("//a[text()='here']")).click();
 	}
 	
 	public String getName() {
-		waitForControlVisible(registerPageUI.NAME_INPUT);
-		return getTextElement(registerPageUI.NAME_INPUT);
+		waitForControlVisible(RegisterPageUI.NAME_INPUT);
+		return getTextElement(RegisterPageUI.NAME_INPUT);
 	}
 	
 	public String getPassword() {
-		waitForControlVisible(registerPageUI.PASSWORD_INPUT);
-		return getTextElement(registerPageUI.PASSWORD_INPUT);
+		waitForControlVisible(RegisterPageUI.PASSWORD_INPUT);
+		return getTextElement(RegisterPageUI.PASSWORD_INPUT);
 	}
 	
 	

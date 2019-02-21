@@ -4,7 +4,7 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class
-				name="com.bankguru.account.Register_Login_Level4_PageFactoryManager" />
+				name="com.bankguru.account.Register_Login_Level6_DynamicLocator_RestParameter" />
 		</classes>
 	</test> <!--Test -->
 	

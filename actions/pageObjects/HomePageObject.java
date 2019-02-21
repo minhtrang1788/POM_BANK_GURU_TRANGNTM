@@ -10,23 +10,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import pageUI.Constants;
-import pageUI.loginPageUI;
-import pageUI.registerPageUI;
+import pageUI.HomePageUI;
+import pageUI.LoginPageUI;
+import pageUI.RegisterPageUI;
 
-public class HomePageObject {
+public class HomePageObject extends AbstractPage{
 	
-	private AbstractPage abstractPage;	
 	WebDriver driver;
 	
 	public  HomePageObject(WebDriver driverUse) {
 		driver = driverUse;
-		abstractPage = new AbstractPage();
-		abstractPage.setDriver(driver);
-		
+		setDriver(driverUse);	
 	}
 	
-	public void checkDisplayedText() throws InterruptedException {
+	public void isDispledHomePage() throws InterruptedException {
 		Thread.sleep(1000);
-		Assert.assertTrue(abstractPage.isControlDisplayed(loginPageUI.WELCOME_LINK));
+		Assert.assertTrue(isControlDisplayed(HomePageUI.WELCOME_LINK));
 	}
+
+	
 }

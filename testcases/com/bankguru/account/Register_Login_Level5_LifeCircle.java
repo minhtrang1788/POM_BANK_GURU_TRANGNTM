@@ -7,9 +7,13 @@ import common.AbstractTest;
 import junit.framework.Assert;
 import pageUI.Constants;
 import pageUI.RegisterPageUI;
+import pageObjects.DepositPageObject;
 import pageObjects.FactoryPageObject;
+import pageObjects.FundTransferPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
+import pageObjects.NewAccountPageObject;
+import pageObjects.NewCustomerPageObject;
 import pageObjects.RegisterPageObject;
 
 import org.testng.annotations.BeforeClass;
@@ -21,14 +25,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
-public class Register_Login_Level4_PageFactoryManager extends AbstractTest {
+public class Register_Login_Level5_LifeCircle extends AbstractTest {
 
 	public static WebDriver driver;
 	private String name,password,url;
 	private LoginPageObject loginPageObject ;
 	private RegisterPageObject registerPageObject ;
 	private HomePageObject homePageObject ;
-
+	private NewCustomerPageObject newCustomerPageObject;
+	private NewAccountPageObject newAccountPageObject;
+	private DepositPageObject depositPageObject;
+	private FundTransferPageObject fundTransferPageObject;
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
@@ -58,7 +65,19 @@ public class Register_Login_Level4_PageFactoryManager extends AbstractTest {
 		homePageObject.isDispledHomePage();
 
 	}
-
+	
+	@Test
+	public void TC_03_LifeCircle()  {
+		//New customer -> new account -> Deposit -> FundTransfer
+		newCustomerPageObject = homePageObject.openNewCustomerPage(driver);
+		
+		newAccountPageObject = newCustomerPageObject.openNewAccountPage(driver);
+		
+		depositPageObject = newAccountPageObject.openDepositPage(driver);
+		
+		fundTransferPageObject = depositPageObject.openFundTransferPage(driver);
+	}
+	
 
 	@AfterClass
 	public void afterClass() {

@@ -1,6 +1,6 @@
 package pageUI;
 
-public class registerPageUI {
+public class RegisterPageUI {
 	public static final String NAME_INPUT = "//td[contains(text(),'User ID')]/following-sibling::td";
 	public static final String PASSWORD_INPUT = "//td[contains(text(),'Password')]/following-sibling::td";
 	public static final String EMAIL_INPUT = "//input[@name='emailid']";

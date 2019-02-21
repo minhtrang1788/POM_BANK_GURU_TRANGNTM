@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import common.AbstractPage;
-import pageUI.loginPageUI;
+import pageUI.LoginPageUI;
 
 public class LoginPageObject extends AbstractPage{
 	WebDriver driver;
@@ -29,18 +29,18 @@ public class LoginPageObject extends AbstractPage{
 	}
 	
 	public void InputName(String name) {
-		waitForControlVisible(loginPageUI.NAME_TEXTBOX);
-		inputTextboxLogin(loginPageUI.NAME_TEXTBOX,name);
+		waitForControlVisible(LoginPageUI.NAME_TEXTBOX);
+		inputTextboxLogin(LoginPageUI.NAME_TEXTBOX,name);
 	}
 	
 	public void InputPassword(String password) {
-		waitForControlVisible(loginPageUI.PASSWORD_TEXTBOX);
-		inputTextboxLogin(loginPageUI.PASSWORD_TEXTBOX,password);
+		waitForControlVisible(LoginPageUI.PASSWORD_TEXTBOX);
+		inputTextboxLogin(LoginPageUI.PASSWORD_TEXTBOX,password);
 	}
 	
 	public HomePageObject clickButtonLogin() {
-		waitForControlVisible(loginPageUI.LOGIN_BUTTON);
-		clickToElement(loginPageUI.LOGIN_BUTTON);
+		waitForControlVisible(LoginPageUI.LOGIN_BUTTON);
+		clickToElement(LoginPageUI.LOGIN_BUTTON);
 		return new HomePageObject(driver);
 	}
 	

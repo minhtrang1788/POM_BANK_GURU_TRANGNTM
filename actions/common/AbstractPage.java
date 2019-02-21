@@ -23,6 +23,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import pageObjects.DepositPageObject;
+import pageObjects.FundTransferPageObject;
+import pageObjects.NewAccountPageObject;
+import pageObjects.NewCustomerPageObject;
+import pageUI.AbstractPageUI;
+import pageUI.LoginPageUI;
+
 public class AbstractPage {
 	WebDriver driver;
 
@@ -81,6 +88,7 @@ public class AbstractPage {
 		object.click();
 	}
 
+	
 	public void sendkeyToElement(String locator, String content) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		object.clear();
@@ -360,6 +368,7 @@ public class AbstractPage {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 	}
 	
+	
 	public void waitForControlClickable(String locator) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
@@ -387,6 +396,63 @@ public class AbstractPage {
 	      return saltStr;
 
 	  }
+	public void test(String value) {
+		
+		System.out.println("value:::"+value);
+	}
+	public AbstractPage openDynamicPage(WebDriver driver,String pageName) {
+		System.out.println("pageName::::::"+pageName);
+		String linkPage = String.format(AbstractPageUI.DYNAMIC_LINK, pageName);
+		System.out.println("linkPage::::::"+linkPage);
+		waitForControlVisible(linkPage);
+		clickToElement(linkPage);
+		switch (pageName) {
+			case "New Account":
+				return new NewAccountPageObject(driver);
+			case "New Customer":
+				return new NewCustomerPageObject(driver);
+			case "Deposit":
+				return new DepositPageObject(driver);
+			case "Fund Transfer":
+				return new FundTransferPageObject(driver);
+		}
+		return null;
+	}
+	
+	public void openDynamicObjectPage(WebDriver driver,String pageName) {
+		System.out.println("pageName::::::"+pageName);
+		String linkPage = String.format(AbstractPageUI.DYNAMIC_LINK, pageName);
+		System.out.println("linkPage::::::"+linkPage);
+		waitForControlVisible(linkPage);
+		clickToElement(linkPage);
+		
+	}
+	public DepositPageObject openDepositPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		waitForControlVisible(AbstractPageUI.DEPOSIT_LINK);
+		clickToElement(AbstractPageUI.DEPOSIT_LINK);
+		return new DepositPageObject(driver);
+	}
+	
+	public NewAccountPageObject openNewAccountPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		waitForControlVisible(AbstractPageUI.NEW_ACCOUNT_LINK);
+		clickToElement(AbstractPageUI.NEW_ACCOUNT_LINK);
+		return new NewAccountPageObject(driver);
+	}
+	
+	public NewCustomerPageObject openNewCustomerPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		waitForControlVisible(AbstractPageUI.NEW_CUSTOMER_LINK);
+		clickToElement(AbstractPageUI.NEW_CUSTOMER_LINK);
+		return new NewCustomerPageObject(driver);
+	}
+	public FundTransferPageObject openFundTransferPage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		waitForControlVisible(AbstractPageUI.FUND_TRANSFER_LINK);
+		clickToElement(AbstractPageUI.FUND_TRANSFER_LINK);
+		return new FundTransferPageObject(driver);
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

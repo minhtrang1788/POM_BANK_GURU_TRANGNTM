@@ -8,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class AbstractTest {
 	WebDriver driver;
 	public WebDriver openMultiBrowser(String browser) {
-		System.out.println("broserName :" + browser);
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
 			driver = new ChromeDriver();
@@ -26,8 +25,6 @@ public class AbstractTest {
 			options.addArguments("window-size=1366x768");
 			driver = new ChromeDriver(options);
 		}
-		System.out.println("driver4444444444444");
-		System.out.println("driver1"+driver);
 		return driver;
 	}
 }
