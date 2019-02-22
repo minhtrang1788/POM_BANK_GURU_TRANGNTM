@@ -12,9 +12,11 @@ public class FactoryPageObject {
 	public static HomePageObject newHomePageObject(WebDriver driver) {
 		return new HomePageObject(driver);
 	}
+	
 	public static LoginPageObject newLoginPageObject(WebDriver driver) {
 		return new LoginPageObject(driver);
 	}
+	
 	public static NewCustomerPageObject newCustomerPageObject(WebDriver driver) {
 		return new NewCustomerPageObject(driver);
 	}
@@ -31,4 +33,7 @@ public class FactoryPageObject {
 		return new FundTransferPageObject(driver);
 	}
 	
+	public static EditCustomerPageObject editCustomerPageObject(WebDriver driver) {
+		return new EditCustomerPageObject(driver);
+	}
 }

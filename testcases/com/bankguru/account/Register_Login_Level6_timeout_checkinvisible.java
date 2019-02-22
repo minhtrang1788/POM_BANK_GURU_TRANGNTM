@@ -27,7 +27,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 
 
-public class Register_Login_Level6_DynamicLocator_RestParameter extends AbstractTest {
+public class Register_Login_Level6_timeout_checkinvisible extends AbstractTest {
 
 	public static WebDriver driver;
 	private String name,password,url;
@@ -66,14 +66,19 @@ public class Register_Login_Level6_DynamicLocator_RestParameter extends Abstract
 
 	}
 	@Test
-	public void TC_03_timeout_checkinvisible() throws InterruptedException  {
+	public void TC_03_LifeCircle() throws InterruptedException  {
+		//New customer -> new account -> Deposit -> FundTransfer
+		/*newCustomerPageObject = (NewCustomerPageObject) homePageObject.openDynamicPage(driver,"New Account");
 		
+		newAccountPageObject = (NewAccountPageObject) newCustomerPageObject.openDynamicPage(driver,"New Account");
+		
+		depositPageObject = (DepositPageObject) newAccountPageObject.openDynamicPage(driver,"Deposit");
+		
+		fundTransferPageObject = (FundTransferPageObject) depositPageObject.openDynamicPage(driver,"Fund Transfer");*/
 		
 		homePageObject.openDynamicObjectPage(driver,"New Customer");
 		newCustomerPageObject = FactoryPageObject.newCustomerPageObject(driver);
 		newCustomerPageObject.isDispledCustomerPage();
-		newCustomerPageObject.isNotDispledHomePage();
-		newCustomerPageObject.isNotDispledCustomerForm();
 		
 		newCustomerPageObject.openDynamicObjectPage(driver,"New Account");
 		newAccountPageObject = FactoryPageObject.newAccountPageObject(driver);

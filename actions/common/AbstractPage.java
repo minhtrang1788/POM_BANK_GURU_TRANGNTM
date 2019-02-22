@@ -32,6 +32,8 @@ import pageUI.LoginPageUI;
 
 public class AbstractPage {
 	WebDriver driver;
+	int shortTime = 5;
+	int LongTime = 30;
 
 	public void setDriver(WebDriver driverUse)
 	{
@@ -156,7 +158,27 @@ public class AbstractPage {
 		WebElement object = driver.findElement(By.xpath(locator));
 		return object.isDisplayed();
 	}
+	
+	public boolean isControlNotDisplayed(String locator) {
+		WebElement object;
+		overwriteTimeOutWait(driver,shortTime);
+		try {
+			object = driver.findElement(By.xpath(locator));
+			
+		} catch(Exception ex) {
+			overwriteTimeOutWait(driver,LongTime);
+			return true;
+			
+		}
+		overwriteTimeOutWait(driver,LongTime);
+		if(object.isDisplayed()) return false;
+		return true;
+	}
 
+
+	public void overwriteTimeOutWait(WebDriver driver, int time) {
+		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
+	}
 	public boolean isControlselected(String locator) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		return object.isSelected();
@@ -396,10 +418,6 @@ public class AbstractPage {
 	      return saltStr;
 
 	  }
-	public void test(String value) {
-		
-		System.out.println("value:::"+value);
-	}
 	public AbstractPage openDynamicPage(WebDriver driver,String pageName) {
 		System.out.println("pageName::::::"+pageName);
 		String linkPage = String.format(AbstractPageUI.DYNAMIC_LINK, pageName);
