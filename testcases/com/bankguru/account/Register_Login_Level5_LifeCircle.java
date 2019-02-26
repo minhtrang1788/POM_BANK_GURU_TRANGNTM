@@ -62,7 +62,7 @@ public class Register_Login_Level5_LifeCircle extends AbstractTest {
 		loginPageObject.clickButtonLogin();
 		Thread.sleep(1000);
 		homePageObject = FactoryPageObject.newHomePageObject(driver);
-		homePageObject.isDispledHomePage();
+		Assert.assertTrue(homePageObject.isDispledHomePage());
 
 	}
 	

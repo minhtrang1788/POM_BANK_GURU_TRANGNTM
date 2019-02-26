@@ -11,30 +11,34 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import pageObjects.DepositPageObject;
 import pageObjects.FundTransferPageObject;
 import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageUI.AbstractPageUI;
-import pageUI.LoginPageUI;
 
 public class AbstractPage {
 	WebDriver driver;
 	int shortTime = 5;
 	int LongTime = 30;
-
+	protected final Log log;
+	protected AbstractPage() {
+		log = LogFactory.getLog(getClass());
+	}
 	public void setDriver(WebDriver driverUse)
 	{
 		driver = driverUse;
@@ -85,6 +89,7 @@ public class AbstractPage {
 		driver.switchTo().alert().sendKeys(text);
 	}
 
+	
 	public void clickToElement(String locator) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		object.click();
@@ -155,8 +160,13 @@ public class AbstractPage {
 	}
 
 	public boolean isControlDisplayed(String locator) {
+		try {
 		WebElement object = driver.findElement(By.xpath(locator));
 		return object.isDisplayed();
+		}catch (Exception ex) {
+			System.out.println("error:"+ex);
+			return false;
+		}
 	}
 	
 	public boolean isControlNotDisplayed(String locator) {
@@ -472,6 +482,67 @@ public class AbstractPage {
 		return new FundTransferPageObject(driver);
 	}
 	
+	private boolean checkPassed(boolean condition) {
+    	boolean pass = true;
+		try {
+			if (condition == true)
+				log.info("===PASSED===");
+			else
+				log.info("===FAILED===");
+			Assert.assertTrue(condition);
+		} catch (Throwable e) {
+			pass = false;
+
+			// Add error vào ReportNG
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+		}
+		return pass;
+	}
+
+	protected boolean verifyTrue(boolean condition) {
+		return checkPassed(condition);
+	}
+
+	private boolean checkFailed(boolean condition) {
+		boolean pass = true;
+		try {
+			if (condition == true)
+				log.info("===PASSED===");
+			else
+				log.info("===FAILED===");
+			Assert.assertFalse(condition);
+		} catch (Throwable e) {
+			pass = false;
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+		}
+		return pass;
+	}
+
+	protected boolean verifyFalse(boolean condition) {
+		return checkFailed(condition);
+	}
+
+	private boolean checkEquals(Object actual, Object expected) {
+		boolean pass = true;
+		try {
+			if (actual == expected)
+				log.info("===PASSED===");
+			else
+				log.info("===FAILED===");
+			Assert.assertEquals(actual, expected);
+		} catch (Throwable e) {
+			pass = false;
+			VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+			Reporter.getCurrentTestResult().setThrowable(e);
+		}
+		return pass;
+	}
+
+	protected boolean verifyEquals(Object actual, Object expected) {
+		return checkEquals(actual, expected);
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

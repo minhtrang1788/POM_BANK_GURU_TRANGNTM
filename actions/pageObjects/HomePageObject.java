@@ -1,18 +1,9 @@
 package pageObjects;
 import common.AbstractPage;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import pageUI.Constants;
 import pageUI.HomePageUI;
-import pageUI.LoginPageUI;
-import pageUI.RegisterPageUI;
+import pageUI.NewCustomerPageUI;
 
 public class HomePageObject extends AbstractPage{
 	
@@ -23,9 +14,19 @@ public class HomePageObject extends AbstractPage{
 		setDriver(driverUse);	
 	}
 	
-	public void isDispledHomePage() throws InterruptedException {
-		Thread.sleep(1000);
-		Assert.assertTrue(isControlDisplayed(HomePageUI.WELCOME_LINK));
+	public boolean isDispledHomePage() throws InterruptedException {
+		return isControlDisplayed(HomePageUI.WELCOME_LINK);
+		
+	}
+	
+	public boolean isNotDispledNewCustomer() throws InterruptedException {
+
+		return isControlNotDisplayed(NewCustomerPageUI.CUSTOMER_TITLE);
+	}
+
+	public boolean isNotDispledCustomerForm() throws InterruptedException {
+
+		return isControlNotDisplayed(NewCustomerPageUI.CUSTOMER_FORM);
 	}
 
 	

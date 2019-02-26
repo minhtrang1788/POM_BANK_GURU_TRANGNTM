@@ -16,24 +16,24 @@ public class NewCustomerPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public void isDispledCustomerPage() throws InterruptedException {
+	public boolean isDispledCustomerPage() throws InterruptedException {
 
-		Assert.assertTrue(isControlDisplayed(NewCustomerPageUI.CUSTOMER_TITLE));
+		return isControlDisplayed(NewCustomerPageUI.CUSTOMER_TITLE);
 	}
 
-	public void isNotDispledHomePage() throws InterruptedException {
+	public boolean isNotDispledHomePage() throws InterruptedException {
 
-		Assert.assertTrue(isControlNotDisplayed(NewCustomerPageUI.WELCOME_LINK));
+		return isControlNotDisplayed(NewCustomerPageUI.WELCOME_LINK);
 	}
 
-	public void isNotDispledCustomerForm() throws InterruptedException {
+	public boolean isNotDispledCustomerForm()  {
 
-		Assert.assertTrue(isControlNotDisplayed(NewCustomerPageUI.CUSTOMER_FORM));
+		return isControlNotDisplayed(NewCustomerPageUI.CUSTOMER_FORM);
 	}
 	
-	public void isDispledCustomerSucessPage() throws InterruptedException {
+	public boolean isDispledCustomerSucessPage() {
 		waitForControlVisible(NewCustomerPageUI.CUSTOMER_SUCCESS_TITLE);
-		Assert.assertTrue(isControlDisplayed(NewCustomerPageUI.CUSTOMER_SUCCESS_TITLE));
+		return isControlDisplayed(NewCustomerPageUI.CUSTOMER_SUCCESS_TITLE);
 	}
 
 	public void inputCustomerName(String value) {

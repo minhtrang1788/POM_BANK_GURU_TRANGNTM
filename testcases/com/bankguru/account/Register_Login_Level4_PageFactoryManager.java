@@ -2,11 +2,7 @@ package com.bankguru.account;
 
 import org.testng.annotations.Test;
 
-import common.AbstractPage;
 import common.AbstractTest;
-import junit.framework.Assert;
-import pageUI.Constants;
-import pageUI.RegisterPageUI;
 import pageObjects.FactoryPageObject;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
@@ -19,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
 public class Register_Login_Level4_PageFactoryManager extends AbstractTest {
@@ -53,9 +50,8 @@ public class Register_Login_Level4_PageFactoryManager extends AbstractTest {
 		loginPageObject.InputName(name);
 		loginPageObject.InputPassword(password);
 		loginPageObject.clickButtonLogin();
-		Thread.sleep(1000);
 		homePageObject = FactoryPageObject.newHomePageObject(driver);
-		homePageObject.isDispledHomePage();
+		Assert.assertTrue(homePageObject.isDispledHomePage());
 
 	}
 

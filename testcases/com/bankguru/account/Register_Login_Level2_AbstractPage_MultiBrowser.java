@@ -29,8 +29,7 @@ public class Register_Login_Level2_AbstractPage_MultiBrowser extends AbstractTes
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		abstractPage = new AbstractPage();
-		abstractPage.setDriver(openMultiBrowser(browserName));
+		driver = openMultiBrowser(browserName);
 	}
 
 	@Test
@@ -49,7 +48,6 @@ public class Register_Login_Level2_AbstractPage_MultiBrowser extends AbstractTes
 		abstractPage.sendkeyToElement("//input[@name='uid']", name);
 		abstractPage.sendkeyToElement("//input[@name='password']", password);
 		abstractPage.clickToElement("//input[@name='btnLogin']");
-		Thread.sleep(1000);
 		Assert.assertTrue(abstractPage.isControlDisplayed("//marquee[contains(text(),'Welcome To Manager')]"));
 
 	}

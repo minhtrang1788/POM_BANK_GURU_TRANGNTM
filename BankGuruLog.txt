@@ -1,0 +1,23 @@
+2019-02-26 15:15:56,797 INFO  [Register_Login_Level8_assert_verify_log_report] CREAT NEW PAGE REGiSTER 
+2019-02-26 15:16:01,628 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 1 : CLICK TO REGiSTER 
+2019-02-26 15:16:01,894 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-02-26 15:16:04,302 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-02-26 15:16:06,079 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 4 : GET NAME 
+2019-02-26 15:16:06,935 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 5 : GET PASS 
+2019-02-26 15:16:06,981 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 1 : GO TO LOGIN LINK 
+2019-02-26 15:16:08,706 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 2 : INPUT NAME 
+2019-02-26 15:16:08,827 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 3 : INPUT PASSWORD 
+2019-02-26 15:16:08,916 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 4 : CLICK BUTTON LOGIN 
+2019-02-26 15:16:09,410 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 5 : OPEN HOME PAGE 
+2019-02-26 15:16:09,410 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 6 : HOME PAGE IS DISPLAY 
+2019-02-26 15:16:11,241 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:11,320 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 7 : NEW CUSTOMER FORM IS NOT DISPLAY 
+2019-02-26 15:16:11,386 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:11,386 INFO  [Register_Login_Level8_assert_verify_log_report] STEP 8 : NEW CUSTOMER IS NOT DISPLAY 
+2019-02-26 15:16:16,567 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:18,250 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:23,415 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:23,444 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:25,115 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:27,917 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 
+2019-02-26 15:16:29,835 INFO  [Register_Login_Level8_assert_verify_log_report] ===PASSED=== 

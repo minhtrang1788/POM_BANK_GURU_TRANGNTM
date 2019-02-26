@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AbstractTest {
 	WebDriver driver;
+	
 	public WebDriver openMultiBrowser(String browser) {
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
@@ -27,4 +28,5 @@ public class AbstractTest {
 		}
 		return driver;
 	}
+	
 }

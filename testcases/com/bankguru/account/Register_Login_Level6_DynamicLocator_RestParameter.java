@@ -1,13 +1,10 @@
 package com.bankguru.account;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
 
-import common.AbstractPage;
 import common.AbstractTest;
-import pageUI.Constants;
-import pageUI.RegisterPageUI;
 import pageObjects.DepositPageObject;
 import pageObjects.FactoryPageObject;
 import pageObjects.FundTransferPageObject;
@@ -24,7 +21,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 
 
 public class Register_Login_Level6_DynamicLocator_RestParameter extends AbstractTest {
@@ -62,7 +58,8 @@ public class Register_Login_Level6_DynamicLocator_RestParameter extends Abstract
 		loginPageObject.clickButtonLogin();
 		Thread.sleep(1000);
 		homePageObject = FactoryPageObject.newHomePageObject(driver);
-		homePageObject.isDispledHomePage();
+		
+		Assert.assertTrue(homePageObject.isDispledHomePage());
 
 	}
 	@Test
@@ -71,21 +68,21 @@ public class Register_Login_Level6_DynamicLocator_RestParameter extends Abstract
 		
 		homePageObject.openDynamicObjectPage(driver,"New Customer");
 		newCustomerPageObject = FactoryPageObject.newCustomerPageObject(driver);
-		newCustomerPageObject.isDispledCustomerPage();
-		newCustomerPageObject.isNotDispledHomePage();
-		newCustomerPageObject.isNotDispledCustomerForm();
+		Assert.assertTrue(newCustomerPageObject.isDispledCustomerPage());
+		Assert.assertTrue(newCustomerPageObject.isNotDispledHomePage());
+		Assert.assertTrue(newCustomerPageObject.isNotDispledCustomerForm());
 		
 		newCustomerPageObject.openDynamicObjectPage(driver,"New Account");
 		newAccountPageObject = FactoryPageObject.newAccountPageObject(driver);
-		newAccountPageObject.isDispledAccountPage();
+		Assert.assertTrue(newAccountPageObject.isDispledAccountPage());
 		
 		newAccountPageObject.openDynamicObjectPage(driver,"Deposit");
 		depositPageObject = FactoryPageObject.newDepositPageObject(driver);
-		depositPageObject.isDispledDepositPage();
+		Assert.assertTrue(depositPageObject.isDispledDepositPage());
 		
 		depositPageObject.openDynamicObjectPage(driver,"Fund Transfer");
 		fundTransferPageObject = FactoryPageObject.newFundTransferPageObject(driver);
-		fundTransferPageObject.isDispledFundTransferPage();
+		Assert.assertTrue(fundTransferPageObject.isDispledFundTransferPage());
 	}
 	
 

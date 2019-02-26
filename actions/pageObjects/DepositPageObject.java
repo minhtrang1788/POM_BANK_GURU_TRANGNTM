@@ -16,9 +16,9 @@ public class DepositPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public void isDispledDepositPage() throws InterruptedException {
+	public boolean isDispledDepositPage() throws InterruptedException {
 		Thread.sleep(1000);
-		Assert.assertTrue(isControlDisplayed(DepositPageUI.DEPOSIT_TITLE));
+		return isControlDisplayed(DepositPageUI.DEPOSIT_TITLE);
 	}
 
 }

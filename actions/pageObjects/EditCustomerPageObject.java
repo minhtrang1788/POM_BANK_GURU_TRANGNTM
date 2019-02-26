@@ -17,9 +17,8 @@ public class EditCustomerPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public void isDispledEditCustomerPage() throws InterruptedException {
-		Thread.sleep(1000);
-		Assert.assertTrue(isControlDisplayed(EditCustomerPageUI.CUSTOMER_TITLE));
+	public boolean isDispledEditCustomerPage()  {
+		return isControlDisplayed(EditCustomerPageUI.CUSTOMER_TITLE);
 	}
 
 	public void inputCustomerID(String value) {
