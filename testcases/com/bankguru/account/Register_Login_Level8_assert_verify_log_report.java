@@ -19,6 +19,7 @@ import org.testng.annotations.Parameters;
 
 import java.lang.reflect.Method;
 
+import org.apache.commons.el.Constants;
 import org.openqa.selenium.WebDriver;
 
 public class Register_Login_Level8_assert_verify_log_report extends AbstractPage {
@@ -32,42 +33,27 @@ public class Register_Login_Level8_assert_verify_log_report extends AbstractPage
 	private NewAccountPageObject newAccountPageObject;
 	private DepositPageObject depositPageObject;
 	private FundTransferPageObject fundTransferPageObject;
-	private AbstractTest abstractTest = new AbstractTest();
+	public AbstractTest abstractTest = new AbstractTest();
 
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
-		driver = abstractTest.openMultiBrowser(browserName);
+		driver = Register_Login_Global.DRIVER;
 	}
+	
 
-	@Test
-	public void TC_01_register(Method methodName) {
-		System.out.println("========"+methodName.getName()+"================");
-		log.info("CREAT NEW PAGE REGiSTER");
-		registerPageObject = FactoryPageObject.newRegisterPageObject(driver);
-		url = registerPageObject.getURL();
-		log.info("STEP 1 : CLICK TO REGiSTER");
-		registerPageObject.clickHere();
-		log.info("STEP 2 : INPUT EMAILE IN REGISTER FORM");
-		registerPageObject.InputEmail();
-		log.info("STEP 3 : CLICK SUBMIT IN REGISTER FORM");
-		registerPageObject.clickButtonRegister();
-		log.info("STEP 4 : GET NAME");
-		name = registerPageObject.getName();
-		log.info("STEP 5 : GET PASS");
-		password = registerPageObject.getPassword();
-
-	}
-
+	
 	@Test
 	public void TC_02_Login(Method methodName) throws InterruptedException {
 		System.out.println("========"+methodName.getName()+"================");
 		log.info("STEP 1 : GO TO LOGIN LINK");
-		loginPageObject = registerPageObject.goLoginLink(url);
+		loginPageObject = FactoryPageObject.newLoginPageObject(driver);
+		loginPageObject.goURLLink(Register_Login_Global.URL);
+		driver.get(pageUI.Constants.LOGIN_LINK);
 		log.info("STEP 2 : INPUT NAME");
-		loginPageObject.InputName(name);
+		loginPageObject.InputName(Register_Login_Global.NAME);
 		log.info("STEP 3 : INPUT PASSWORD");
-		loginPageObject.InputPassword(password);
+		loginPageObject.InputPassword(Register_Login_Global.PASSWORD);
 		log.info("STEP 4 : CLICK BUTTON LOGIN");
 		loginPageObject.clickButtonLogin();
 		log.info("STEP 5 : OPEN HOME PAGE");
@@ -84,21 +70,7 @@ public class Register_Login_Level8_assert_verify_log_report extends AbstractPage
 
 	@Test
 	public void TC_03_LifeCircle() throws InterruptedException {
-		// New customer -> new account -> Deposit -> FundTransfer
-		/*
-		 * newCustomerPageObject = (NewCustomerPageObject)
-		 * homePageObject.openDynamicPage(driver,"New Account");
-		 * 
-		 * newAccountPageObject = (NewAccountPageObject)
-		 * newCustomerPageObject.openDynamicPage(driver,"New Account");
-		 * 
-		 * depositPageObject = (DepositPageObject)
-		 * newAccountPageObject.openDynamicPage(driver,"Deposit");
-		 * 
-		 * fundTransferPageObject = (FundTransferPageObject)
-		 * depositPageObject.openDynamicPage(driver,"Fund Transfer");
-		 */
-
+		
 		homePageObject.openDynamicObjectPage(driver, "New Customer");
 		newCustomerPageObject = FactoryPageObject.newCustomerPageObject(driver);
 		verifyTrue(newCustomerPageObject.isDispledCustomerPage());
@@ -120,6 +92,7 @@ public class Register_Login_Level8_assert_verify_log_report extends AbstractPage
 
 	@AfterClass
 	public void afterClass() {
+		closeBrowserAndDriver(driver);
 	}
 
 }

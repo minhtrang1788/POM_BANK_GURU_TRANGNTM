@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
 <suite name="Suite" parallel="tests" thread-count="1">
+	<listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="common.ExtentReportListener"/>
+	</listeners>
 	 <test name="Test on firefox">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class
+				name="com.bankguru.account.Register_Login_Global" /> 
+			<class	
+				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
+		</classes>
+	</test> <!--Test -->
+	<!--
+	<test name="Test on chrome">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
 				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
 		</classes>
-	</test> <!--Test -->
-	
+	</test> 
+	<test name="Test on chrome headless">
+		<parameter name="browser" value="chromeheadless" />
+		<classes>
+			<class
+				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
+		</classes>
+	</test> 
+	-->
 </suite> <!-- Suite -->

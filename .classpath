@@ -10,7 +10,7 @@
 	<classpathentry kind="lib" path="lib/bson-3.0.4.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.5.jar"/>
 	<classpathentry kind="lib" path="lib/config-1.3.2.jar"/>
-	<classpathentry kind="lib" path="lib/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="lib/extentreports-2.41.2.jar" sourcepath="C:/TEMP/.org.sf.feeling.decompiler1551343334692/source/extentreports-2.41.2-sources.jar"/>
 	<classpathentry kind="lib" path="lib/freemarker-2.3.23.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.8.0.jar"/>
 	<classpathentry kind="lib" path="lib/guice-4.1.0.jar"/>

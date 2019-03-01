@@ -36,4 +36,8 @@ public class FactoryPageObject {
 	public static EditCustomerPageObject editCustomerPageObject(WebDriver driver) {
 		return new EditCustomerPageObject(driver);
 	}
+	
+	public static EditCustomerFormPageObject editCustomerFormPageObject(WebDriver driver) {
+		return new EditCustomerFormPageObject(driver);
+	}
 }
