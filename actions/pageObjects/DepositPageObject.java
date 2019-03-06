@@ -7,6 +7,7 @@ import common.AbstractPage;
 import pageUI.DepositPageUI;
 import pageUI.HomePageUI;
 import pageUI.LoginPageUI;
+import pageUI.NewAccountPageUI;
 
 public class DepositPageObject extends AbstractPage {
 	WebDriver driver;
@@ -16,9 +17,18 @@ public class DepositPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public boolean isDispledDepositPage() throws InterruptedException {
-		Thread.sleep(1000);
+	public boolean isDispledDepositPage()   {
 		return isControlDisplayed(DepositPageUI.DEPOSIT_TITLE);
+	}
+	
+	public void clickSubmit() {
+		waitForControlVisible(DepositPageUI.DEPOSIT_BTN_SUBMIT);
+		clickToElement(DepositPageUI.DEPOSIT_BTN_SUBMIT);
+	}
+	
+	public boolean isDispledDepositSuccessPage(String accountNo){
+		
+		return isControlDisplayed(String.format(DepositPageUI.DEPOSIT_TITLE_SUCCESS,accountNo));
 	}
 
 }

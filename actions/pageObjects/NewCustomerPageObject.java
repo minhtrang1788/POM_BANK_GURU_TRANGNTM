@@ -86,9 +86,6 @@ public class NewCustomerPageObject extends AbstractPage {
 		clickToElement(NewCustomerPageUI.CUSTOMER_BTN_SUBMIT);
 	}
 
-	public String getCustomerId() {
-		waitForControlVisible(NewCustomerPageUI.CUSTOMER_ID);
-		return getTextElement(NewCustomerPageUI.CUSTOMER_ID);
-	}
+	
 
 }

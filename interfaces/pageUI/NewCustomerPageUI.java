@@ -13,7 +13,7 @@ public class NewCustomerPageUI {
 	public static final String CUSTOMER_PASSWORD = "//input[@name='password']";
 	public static final String CUSTOMER_BTN_SUBMIT = "//input[@name='sub']";
 	public static final String CUSTOMER_SUCCESS_TITLE = "//p[text()='Customer Registered Successfully!!!']";
-	public static final String CUSTOMER_ID = "//td[contains(text(),'Customer ID')]/following-sibling::td";
+
 	public static final String WELCOME_LINK = "//marquee[contains(text(),'Welcome To Manager')]";
 	public static final String CUSTOMER_FORM = "//form[@name='addcust')]";
 

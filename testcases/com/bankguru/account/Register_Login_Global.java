@@ -58,7 +58,7 @@ public class Register_Login_Global extends AbstractPage {
 	
 	@AfterClass
 	public void afterClass() {
-		
+		closeBrowserAndDriver(DRIVER);
 	}
 
 }

@@ -30,26 +30,29 @@ import pageObjects.FundTransferPageObject;
 import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageUI.AbstractPageUI;
+import pageUI.EditCustomerPageUI;
+import pageUI.LoginPageUI;
 
 public class AbstractPage {
 	WebDriver driver;
 	int shortTime = 5;
 	int LongTime = 30;
 	protected final Log log;
+
 	protected AbstractPage() {
 		log = LogFactory.getLog(getClass());
 	}
-	public void setDriver(WebDriver driverUse)
-	{
+
+	public void setDriver(WebDriver driverUse) {
 		driver = driverUse;
 	}
-	public WebDriver getDriver()
-	{
+
+	public WebDriver getDriver() {
 		return driver;
 	}
+
 	public void goURLLink(String url) {
 		driver.get(url);
-		
 
 	}
 
@@ -81,21 +84,19 @@ public class AbstractPage {
 		driver.switchTo().alert().dismiss();
 	}
 
-	public void getTextAlert() {
-		driver.switchTo().alert().getText();
+	public String getTextAlert() {
+		return driver.switchTo().alert().getText();
 	}
 
 	public void sendkeyToAlert(String text) {
 		driver.switchTo().alert().sendKeys(text);
 	}
 
-	
 	public void clickToElement(String locator) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		object.click();
 	}
 
-	
 	public void sendkeyToElement(String locator, String content) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		object.clear();
@@ -160,35 +161,37 @@ public class AbstractPage {
 	}
 
 	public boolean isControlDisplayed(String locator) {
+		overwriteTimeOutWait(driver, 30);
 		try {
-		WebElement object = driver.findElement(By.xpath(locator));
-		return object.isDisplayed();
-		}catch (Exception ex) {
-			System.out.println("error:"+ex);
+			WebElement object = driver.findElement(By.xpath(locator));
+			return object.isDisplayed();
+		} catch (Exception ex) {
+			System.out.println("error:" + ex);
 			return false;
 		}
 	}
-	
+
 	public boolean isControlNotDisplayed(String locator) {
 		WebElement object;
-		overwriteTimeOutWait(driver,shortTime);
+		overwriteTimeOutWait(driver, shortTime);
 		try {
 			object = driver.findElement(By.xpath(locator));
-			
-		} catch(Exception ex) {
-			overwriteTimeOutWait(driver,LongTime);
+
+		} catch (Exception ex) {
+			overwriteTimeOutWait(driver, LongTime);
 			return true;
-			
+
 		}
-		overwriteTimeOutWait(driver,LongTime);
-		if(object.isDisplayed()) return false;
+		overwriteTimeOutWait(driver, LongTime);
+		if (object.isDisplayed())
+			return false;
 		return true;
 	}
-
 
 	public void overwriteTimeOutWait(WebDriver driver, int time) {
 		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
 	}
+
 	public boolean isControlselected(String locator) {
 		WebElement object = driver.findElement(By.xpath(locator));
 		return object.isSelected();
@@ -399,89 +402,96 @@ public class AbstractPage {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 	}
-	
-	
+
 	public void waitForControlClickable(String locator) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
 	}
-	
+
 	public void waitForControlNotVisible(String locator) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
 	}
-	
+
 	public void waitForAlertPresence() {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
-	
-	public static String getEmailString() {
-	      String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-	      StringBuilder salt = new StringBuilder();
-	      Random rnd = new Random();
-	      while (salt.length() < 10) { // length of the random string.
-	          int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-	          salt.append(SALTCHARS.charAt(index));
-	      }
-	      String saltStr = salt.toString()+ "@example.com";
-	      return saltStr;
 
-	  }
-	public AbstractPage openDynamicPage(WebDriver driver,String pageName) {
-		System.out.println("pageName::::::"+pageName);
+	public static String getEmailString() {
+		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		StringBuilder salt = new StringBuilder();
+		Random rnd = new Random();
+		while (salt.length() < 10) { // length of the random string.
+			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+			salt.append(SALTCHARS.charAt(index));
+		}
+		String saltStr = salt.toString() + "@example.com";
+		return saltStr;
+
+	}
+
+	public AbstractPage openDynamicPage(WebDriver driver, String pageName) {
+		System.out.println("pageName::::::" + pageName);
 		String linkPage = String.format(AbstractPageUI.DYNAMIC_LINK, pageName);
-		System.out.println("linkPage::::::"+linkPage);
+		System.out.println("linkPage::::::" + linkPage);
 		waitForControlVisible(linkPage);
 		clickToElement(linkPage);
 		switch (pageName) {
-			case "New Account":
-				return new NewAccountPageObject(driver);
-			case "New Customer":
-				return new NewCustomerPageObject(driver);
-			case "Deposit":
-				return new DepositPageObject(driver);
-			case "Fund Transfer":
-				return new FundTransferPageObject(driver);
+		case "New Account":
+			return new NewAccountPageObject(driver);
+		case "New Customer":
+			return new NewCustomerPageObject(driver);
+		case "Deposit":
+			return new DepositPageObject(driver);
+		case "Fund Transfer":
+			return new FundTransferPageObject(driver);
 		}
 		return null;
 	}
-	
-	public void openDynamicObjectPage(WebDriver driver,String pageName) {
+
+	public  void openDynamicObjectPage(WebDriver driver, String pageName) {
 		String linkPage = String.format(AbstractPageUI.DYNAMIC_LINK, pageName);
 		waitForControlVisible(linkPage);
 		clickToElement(linkPage);
-		
 	}
+	
+
+	public boolean isDispledDynamicTitlePage(WebDriver driver, String titlePage) {
+		String xpathTitle = String.format(AbstractPageUI.DYNAMIC_TITLE, titlePage);
+		return isControlDisplayed(xpathTitle);
+
+	}	
 	public DepositPageObject openDepositPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		waitForControlVisible(AbstractPageUI.DEPOSIT_LINK);
 		clickToElement(AbstractPageUI.DEPOSIT_LINK);
 		return new DepositPageObject(driver);
 	}
-	
+
 	public NewAccountPageObject openNewAccountPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		waitForControlVisible(AbstractPageUI.NEW_ACCOUNT_LINK);
 		clickToElement(AbstractPageUI.NEW_ACCOUNT_LINK);
 		return new NewAccountPageObject(driver);
 	}
-	
+
 	public NewCustomerPageObject openNewCustomerPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		waitForControlVisible(AbstractPageUI.NEW_CUSTOMER_LINK);
 		clickToElement(AbstractPageUI.NEW_CUSTOMER_LINK);
 		return new NewCustomerPageObject(driver);
 	}
+
 	public FundTransferPageObject openFundTransferPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		waitForControlVisible(AbstractPageUI.FUND_TRANSFER_LINK);
 		clickToElement(AbstractPageUI.FUND_TRANSFER_LINK);
 		return new FundTransferPageObject(driver);
 	}
-	
+
 	private boolean checkPassed(boolean condition) {
-    	boolean pass = true;
+		boolean pass = true;
 		try {
 			if (condition == true)
 				log.info("===PASSED===");
@@ -541,8 +551,9 @@ public class AbstractPage {
 	protected boolean verifyEquals(Object actual, Object expected) {
 		return checkEquals(actual, expected);
 	}
+
 	protected void closeBrowserAndDriver(WebDriver driver) {
-    	try {
+		try {
 			String osName = System.getProperty("os.name").toLowerCase();
 			System.out.println("OS name = " + osName);
 
@@ -572,6 +583,21 @@ public class AbstractPage {
 			System.out.println(e.getMessage());
 		}
 	}
+
+	public void sendDynamicInputText(String name, String value) {
+		String inputTextXpath = String.format(AbstractPageUI.DYNAMIC_INPUT_TEXT, name);
+		waitForControlVisible(inputTextXpath);
+		sendkeyToElement(inputTextXpath, value);
+	}
+	
+	public String getDynamicInputText(String name) {
+		String xpathText = String.format(AbstractPageUI.DYNAMIC_TEXT_SUCCESS_CUSTOMER_REGISTER, name);
+		System.out.println("xpathText-----------"+xpathText);
+		waitForControlVisible(xpathText);
+		System.out.println("xpathText-------getText----"+getTextElement(xpathText));
+		return getTextElement(xpathText);
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

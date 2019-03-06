@@ -8,28 +8,30 @@
         <listener class-name="common.ExtentReportListener"/>
 	</listeners>
 	 <test name="Test on firefox">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="firefox" />
 		<classes>
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
 			<class	
-				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
+				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
 		</classes>
-	</test> <!--Test -->
-	<!--
+	</test> 
 	<test name="Test on chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
-				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
+				name="com.bankguru.account.Register_Login_Global" /> 
+			<class
+				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
 		</classes>
 	</test> 
 	<test name="Test on chrome headless">
 		<parameter name="browser" value="chromeheadless" />
 		<classes>
 			<class
-				name="com.bankguru.account.Register_Login_Level8_assert_verify_log_report" />
+				name="com.bankguru.account.Register_Login_Global" /> 
+			<class
+				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
 		</classes>
 	</test> 
-	-->
 </suite> <!-- Suite -->

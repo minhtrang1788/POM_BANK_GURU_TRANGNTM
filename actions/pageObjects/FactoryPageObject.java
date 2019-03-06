@@ -40,4 +40,24 @@ public class FactoryPageObject {
 	public static EditCustomerFormPageObject editCustomerFormPageObject(WebDriver driver) {
 		return new EditCustomerFormPageObject(driver);
 	}
+	
+	public static SuccessRegisterNewCustomerPageObject newSuccessRegisterNewCustomerPageObject(WebDriver driver) {
+		return new SuccessRegisterNewCustomerPageObject(driver);
+	}
+	
+	public static WithdrawPageObject newWithdrawPageObject(WebDriver driver) {
+		return new WithdrawPageObject(driver);
+	}
+	
+	public static BalanceEnquiryPageObject newBalanceEnquiryPageObject(WebDriver driver) {
+		return new BalanceEnquiryPageObject(driver);
+	}
+	
+	public static DeleteAccPageObject newDeleteAccPageObject(WebDriver driver) {
+		return new DeleteAccPageObject(driver);
+	}
+	
+	public static DeleteCustomerPageObject newDeleteCustomerPageObject(WebDriver driver) {
+		return new DeleteCustomerPageObject(driver);
+	}
 }
