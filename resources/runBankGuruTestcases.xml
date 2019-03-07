@@ -21,16 +21,16 @@
 		<classes>
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
-			<class
+			<class	
 				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
 		</classes>
 	</test> 
-	<test name="Test on chrome headless">
+	<test name="Test on chromeheadless">
 		<parameter name="browser" value="chromeheadless" />
 		<classes>
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
-			<class
+			<class	
 				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
 		</classes>
 	</test> 

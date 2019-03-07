@@ -18,16 +18,5 @@ public class BalanceEnquiryPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public boolean isDispledBalanceEnquiryPage()   {
-		return isControlDisplayed(BalanceEnquiryPageUI.BALANCE_ENQUIRY_TITLE);
-	}
 	
-	public void clickSubmit() {
-		waitForControlVisible(BalanceEnquiryPageUI.BALANCE_ENQUIRY_BTN_SUBMIT);
-		clickToElement(BalanceEnquiryPageUI.BALANCE_ENQUIRY_BTN_SUBMIT);
-	}
-	
-	public boolean isDispledBalanceEnquirySuccessPage(String accNo)   {
-		return isControlDisplayed(String.format(BalanceEnquiryPageUI.BALANCE_ENQUIRY_TITLE_SUCCESS,accNo) );
-	}
 }

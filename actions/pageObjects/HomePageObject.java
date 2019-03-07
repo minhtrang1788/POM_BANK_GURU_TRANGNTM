@@ -13,7 +13,6 @@ public class HomePageObject extends AbstractPage{
 		driver = driverUse;
 		setDriver(driverUse);	
 	}
-	
 	public boolean isDispledHomePage() throws InterruptedException {
 		return isControlDisplayed(HomePageUI.WELCOME_LINK);
 		

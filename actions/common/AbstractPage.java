@@ -31,6 +31,7 @@ import pageObjects.NewAccountPageObject;
 import pageObjects.NewCustomerPageObject;
 import pageUI.AbstractPageUI;
 import pageUI.EditCustomerPageUI;
+import pageUI.FundTransferPageUI;
 import pageUI.LoginPageUI;
 
 public class AbstractPage {
@@ -586,16 +587,21 @@ public class AbstractPage {
 
 	public void sendDynamicInputText(String name, String value) {
 		String inputTextXpath = String.format(AbstractPageUI.DYNAMIC_INPUT_TEXT, name);
-		waitForControlVisible(inputTextXpath);
 		sendkeyToElement(inputTextXpath, value);
 	}
 	
 	public String getDynamicInputText(String name) {
 		String xpathText = String.format(AbstractPageUI.DYNAMIC_TEXT_SUCCESS_CUSTOMER_REGISTER, name);
-		System.out.println("xpathText-----------"+xpathText);
 		waitForControlVisible(xpathText);
 		System.out.println("xpathText-------getText----"+getTextElement(xpathText));
 		return getTextElement(xpathText);
+	}
+	
+	public void clickDynamicSubmit(String name) {
+		String xpathText = String.format(AbstractPageUI.DYNAMIC_BTN_SUBMIT, name);
+		System.out.println("xpathText-----------"+xpathText);
+		waitForControlVisible(xpathText);
+		clickToElement(xpathText);
 	}
 
 	public static void main(String[] args) {

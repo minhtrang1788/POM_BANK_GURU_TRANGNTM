@@ -19,14 +19,6 @@ public class DeleteAccPageObject extends AbstractPage {
 		driver = driverUse;
 		setDriver(driverUse);
 	}
-	public boolean isDispledDeleteAccPage()   {
-		return isControlDisplayed(DeleteAccPageUI.DELETE_ACC_TITLE);
-	}
-	
-	public void clickSubmit() {
-		waitForControlVisible(DeleteAccPageUI.DELETE_ACC_BTN_SUBMIT);
-		clickToElement(DeleteAccPageUI.DELETE_ACC_BTN_SUBMIT);
-	}
 	
 	public void clickOkAlert()   {
 		acceptAlert();

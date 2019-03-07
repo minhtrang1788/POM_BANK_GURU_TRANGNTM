@@ -79,7 +79,7 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 	private String accPayee = "57417";
 	private int ammoutTranferToAcc = 10000;
 	private String browser = "firefox";
-	
+
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
@@ -94,9 +94,9 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		loginPageObject.goURL(Constants.LOGIN_LINK);
 
 		log.info("STEP 2: Login with name and pass");
-		loginPageObject.InputName(name);
-		loginPageObject.InputPassword(password);
-		loginPageObject.clickButtonLogin();
+		loginPageObject.sendDynamicInputText("uid", name);
+		loginPageObject.sendDynamicInputText("password", password);
+		loginPageObject.clickDynamicSubmit("btnLogin");
 		homePageObject = FactoryPageObject.newHomePageObject(driver);
 		verifyTrue(homePageObject.isDispledHomePage());
 
@@ -105,10 +105,10 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 
 		log.info("STEP 4: Fill all info for customer form");
 		newCustomerPageObject = FactoryPageObject.newCustomerPageObject(driver);
-		verifyTrue(newCustomerPageObject.isDispledCustomerPage());
+		verifyTrue(newCustomerPageObject.isDispledDynamicTitlePage(driver, "Add New Customer"));
 
 		newCustomerPageObject.sendDynamicInputText("name", customerName);
-		if(browser.equals("firefox"))
+		if (browser.equals("firefox"))
 			newCustomerPageObject.sendDynamicInputText("dob", dateOfBirth);
 		else
 			newCustomerPageObject.sendDynamicInputText("dob", dateOfBirth_chrome);
@@ -122,20 +122,21 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		newCustomerPageObject.sendDynamicInputText("password", pass);
 
 		log.info("STEP 5: Click submit button");
-		newCustomerPageObject.clickSubmit();
-		
-		successRegisterNewCustomerPageObject = FactoryPageObject.newSuccessRegisterNewCustomerPageObject(driver);
-		verifyTrue(successRegisterNewCustomerPageObject.isDispledSuccessRegisterCustomer());
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Customer Name"), customerName);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Birthdate"), dateOfBirth);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Address"), address);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("City"), city);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("State"), state);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Pin"), pin);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Mobile No."), mobile);
-		Assert.assertEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Email"), email);
+		newCustomerPageObject.clickDynamicSubmit("sub");
 
-		customerId = successRegisterNewCustomerPageObject.getCustomerId();
+		successRegisterNewCustomerPageObject = FactoryPageObject.newSuccessRegisterNewCustomerPageObject(driver);
+		verifyTrue(successRegisterNewCustomerPageObject.isDispledDynamicTitlePage(driver,
+				"Customer Registered Successfully!!!"));
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Customer Name"), customerName);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Birthdate"), dateOfBirth);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Address"), address);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("City"), city);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("State"), state);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Pin"), pin);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Mobile No."), mobile);
+		verifyEquals(successRegisterNewCustomerPageObject.getDynamicInputText("Email"), email);
+
+		customerId = successRegisterNewCustomerPageObject.getDynamicInputText("Customer ID");
 	}
 
 	@Test
@@ -143,17 +144,17 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		log.info("STEP 1: Open edit customer page");
 		newCustomerPageObject.openDynamicObjectPage(driver, "Edit Customer");
 		editCustomerPageObject = FactoryPageObject.editCustomerPageObject(driver);
-		verifyTrue(editCustomerPageObject.isDispledDynamicTitlePage(driver,"Edit Customer Form"));
+		verifyTrue(editCustomerPageObject.isDispledDynamicTitlePage(driver, "Edit Customer Form"));
 
 		log.info("STEP 2: enter customerID");
-		editCustomerPageObject.inputCustomerID(customerId);
+		editCustomerPageObject.sendDynamicInputText("cusid", customerId);
 
 		log.info("STEP 3: click submit button");
-		editCustomerPageObject.clickSubmit();
+		editCustomerPageObject.clickDynamicSubmit("AccSubmit");
 		editCustomerFormPageObject = FactoryPageObject.editCustomerFormPageObject(driver);
 
 		log.info("STEP 4: Fill edit info customer");
-		verifyTrue(editCustomerPageObject.isDispledDynamicTitlePage(driver,"Edit Customer"));
+		verifyTrue(editCustomerPageObject.isDispledDynamicTitlePage(driver, "Edit Customer"));
 
 		editCustomerFormPageObject.inputAdress(address2);
 		editCustomerFormPageObject.sendDynamicInputText("city", city2);
@@ -163,7 +164,7 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		editCustomerFormPageObject.sendDynamicInputText("emailid", getEmailString());
 
 		log.info("STEP 5: Click submit button");
-		editCustomerFormPageObject.clickSubmit();
+		editCustomerFormPageObject.clickDynamicSubmit("sub");
 
 	}
 
@@ -172,24 +173,24 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		log.info("STEP 1: Open new account page");
 		editCustomerFormPageObject.openDynamicObjectPage(driver, "New Account");
 		newAccountPageObject = FactoryPageObject.newAccountPageObject(driver);
-		
+
 		log.info("STEP 2: Verify new account page is displayed");
-		verifyTrue(newAccountPageObject.isDispledDynamicTitlePage(driver,"Add new account form"));
-		
+		verifyTrue(newAccountPageObject.isDispledDynamicTitlePage(driver, "Add new account form"));
+
 		log.info("STEP 3: fill alls input for new account form");
 		newAccountPageObject.sendDynamicInputText("cusid", customerId);
 		newAccountPageObject.selectAccountType();
 		newAccountPageObject.sendDynamicInputText("inideposit", String.valueOf(initDeposit));
-		
+
 		log.info("STEP 4: Click submit form new account");
-		newAccountPageObject.clickSubmit();
-		
+		newAccountPageObject.clickDynamicSubmit("button2");
+
 		log.info("STEP 5: Verify create new account successfull");
-		verifyTrue(newAccountPageObject.isDispledDynamicTitlePage(driver,"Account Generated Successfully!!!"));
+		verifyTrue(newAccountPageObject.isDispledDynamicTitlePage(driver, "Account Generated Successfully!!!"));
 		accountNumber = newAccountPageObject.getDynamicInputText("Account ID");
-		
+
 		log.info("STEP 6: Verify current amount is correct");
-		Assert.assertEquals(newAccountPageObject.getDynamicInputText("Current Amount"), String.valueOf(initDeposit));
+		verifyEquals(newAccountPageObject.getDynamicInputText("Current Amount"), String.valueOf(initDeposit));
 
 	}
 
@@ -200,21 +201,22 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		depositPageObject = FactoryPageObject.newDepositPageObject(driver);
 
 		log.info("STEP 2: verify deposit page is displayed");
-		verifyTrue(depositPageObject.isDispledDynamicTitlePage(driver,"Amount Deposit Form"));
-		
+		verifyTrue(depositPageObject.isDispledDynamicTitlePage(driver, "Amount Deposit Form"));
+
 		log.info("STEP 3: Fill information for deposit form");
 		depositPageObject.sendDynamicInputText("accountno", accountNumber);
 		depositPageObject.sendDynamicInputText("ammount", String.valueOf(amountTranfer));
 		depositPageObject.sendDynamicInputText("desc", descDeposit);
-		
+
 		log.info("STEP 4: Click button submit form deposit");
-		depositPageObject.clickSubmit();
-		
+		depositPageObject.clickDynamicSubmit("AccSubmit");
+
 		log.info("STEP 5: Verify deposit successfull");
-		verifyTrue(depositPageObject.isDispledDynamicTitlePage(driver,"Transaction details of Deposit for Account "+accountNumber));
-		
+		verifyTrue(depositPageObject.isDispledDynamicTitlePage(driver,
+				"Transaction details of Deposit for Account " + accountNumber));
+
 		log.info("STEP 6: Verify current balance is correct");
-		Assert.assertEquals(depositPageObject.getDynamicInputText("Current Balance"),
+		verifyEquals(depositPageObject.getDynamicInputText("Current Balance"),
 				String.valueOf(initDeposit + amountTranfer));
 	}
 
@@ -223,49 +225,48 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		log.info("STEP 1: Open new withdrawal page");
 		depositPageObject.openDynamicObjectPage(driver, "Withdrawal");
 		withdrawPageObject = FactoryPageObject.newWithdrawPageObject(driver);
-		
+
 		log.info("STEP 2: Verify withdrawal page is displayed");
-		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver,"Amount Withdrawal Form"));
-		
+		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver, "Amount Withdrawal Form"));
+
 		log.info("STEP 3: Fill all info in withdrawal form");
 		withdrawPageObject.sendDynamicInputText("accountno", accountNumber);
 		withdrawPageObject.sendDynamicInputText("ammount", String.valueOf(amountWithdraw));
 		withdrawPageObject.sendDynamicInputText("desc", "Withdraw");
-		
+
 		log.info("STEP 4: Click button submit form withdrawal");
-		withdrawPageObject.clickSubmit();
-		
+		withdrawPageObject.clickDynamicSubmit("AccSubmit");
+
 		log.info("STEP 5: Verify withdraw successfull");
-		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver,"Transaction details of Withdrawal for Account "+accountNumber));
-		
+		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver,
+				"Transaction details of Withdrawal for Account " + accountNumber));
+
 		log.info("STEP 6: Verify current balance is correct");
-		Assert.assertEquals(withdrawPageObject.getDynamicInputText("Current Balance"),
+		verifyEquals(withdrawPageObject.getDynamicInputText("Current Balance"),
 				String.valueOf(initDeposit + amountTranfer - amountWithdraw));
 	}
 
-	
-
 	@Test
 	public void TC_06_FundTrafer_Money() {
+
 		log.info("STEP 1: Open new new fund tranfer page");
 		withdrawPageObject.openDynamicObjectPage(driver, "Fund Transfer");
 		fundTransferPageObject = FactoryPageObject.newFundTransferPageObject(driver);
 
 		log.info("STEP 2: Verify fund tranfer page is displayed");
-		verifyTrue(fundTransferPageObject.isDispledFundTransferPage());
-		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver,"Fund transfer"));
-		
+		verifyTrue(withdrawPageObject.isDispledDynamicTitlePage(driver, "Fund transfer"));
+
 		log.info("STEP 3: Fill all info in fund tranfer form");
 		fundTransferPageObject.sendDynamicInputText("payersaccount", accountNumber);
 		fundTransferPageObject.sendDynamicInputText("payeeaccount", accPayee);
 		fundTransferPageObject.sendDynamicInputText("ammount", String.valueOf(ammoutTranferToAcc));
 		fundTransferPageObject.sendDynamicInputText("desc", "Tranfer");
-		
+
 		log.info("STEP 4: Click button submit form fund tranfer");
-		fundTransferPageObject.clickSubmit();
-		
+		fundTransferPageObject.clickDynamicSubmit("AccSubmit");
+
 		log.info("STEP 5: Verify current balance is correct");
-		Assert.assertEquals(fundTransferPageObject.getDynamicInputText("Amount"), String.valueOf(ammoutTranferToAcc));
+		verifyEquals(fundTransferPageObject.getDynamicInputText("Amount"), String.valueOf(ammoutTranferToAcc));
 	}
 
 	@Test
@@ -275,19 +276,20 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		balanceEnquiryPageObject = FactoryPageObject.newBalanceEnquiryPageObject(driver);
 
 		log.info("STEP 2: Verify Balance Enquiry page is displayed");
-		verifyTrue(balanceEnquiryPageObject.isDispledDynamicTitlePage(driver,"Balance Enquiry Form"));
-		
+		verifyTrue(balanceEnquiryPageObject.isDispledDynamicTitlePage(driver, "Balance Enquiry Form"));
+
 		log.info("STEP 3: Input account number");
 		balanceEnquiryPageObject.sendDynamicInputText("accountno", accountNumber);
-		
+
 		log.info("STEP 4: Click button submit form Balance Enquiry");
-		balanceEnquiryPageObject.clickSubmit();
-		
+		balanceEnquiryPageObject.clickDynamicSubmit("AccSubmit");
+
 		log.info("STEP 5: Verify check Balance Enquiry successfull");
-		verifyTrue(balanceEnquiryPageObject.isDispledDynamicTitlePage(driver,"Balance Details for Account "+accountNumber));
-		
+		verifyTrue(balanceEnquiryPageObject.isDispledDynamicTitlePage(driver,
+				"Balance Details for Account " + accountNumber));
+
 		log.info("STEP 6: Verify current balance is correct");
-		Assert.assertEquals(balanceEnquiryPageObject.getDynamicInputText("Balance"),
+		verifyEquals(balanceEnquiryPageObject.getDynamicInputText("Balance"),
 				String.valueOf(initDeposit + amountTranfer - amountWithdraw - ammoutTranferToAcc));
 	}
 
@@ -296,19 +298,19 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		log.info("STEP 1: Open Delete Account page");
 		balanceEnquiryPageObject.openDynamicObjectPage(driver, "Delete Account");
 		deleteAccPageObject = FactoryPageObject.newDeleteAccPageObject(driver);
-		
+
 		log.info("STEP 2:Verify Delete Account page is displayed");
-		verifyTrue(deleteAccPageObject.isDispledDynamicTitlePage(driver,"Delete Account Form"));
-		
+		verifyTrue(deleteAccPageObject.isDispledDynamicTitlePage(driver, "Delete Account Form"));
+
 		log.info("STEP 3: Input account number");
 		deleteAccPageObject.sendDynamicInputText("accountno", accountNumber);
 
 		log.info("STEP 4: Click button submit ");
-		deleteAccPageObject.clickSubmit();
+		deleteAccPageObject.clickDynamicSubmit("AccSubmit");
 		deleteAccPageObject.clickOkAlert();
-		
+
 		log.info("STEP 5: Verify message content : Account Deleted Sucessfully");
-		Assert.assertEquals(deleteAccPageObject.getTextAlert(), "Account Deleted Sucessfully");
+		verifyEquals(deleteAccPageObject.getTextAlert(), "Account Deleted Sucessfully");
 		deleteAccPageObject.clickOkAlert();
 
 	}
@@ -318,19 +320,19 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 		log.info("STEP 1: Open Delete customer page");
 		deleteAccPageObject.openDynamicObjectPage(driver, "Delete Customer");
 		deleteCustomerPageObject = FactoryPageObject.newDeleteCustomerPageObject(driver);
-		
+
 		log.info("STEP 2:Verify Delete Account page is displayed");
-		verifyTrue(deleteCustomerPageObject.isDispledDynamicTitlePage(driver,"Delete Customer Form"));
-		
+		verifyTrue(deleteCustomerPageObject.isDispledDynamicTitlePage(driver, "Delete Customer Form"));
+
 		log.info("STEP 2:Input customer ID");
 		deleteCustomerPageObject.sendDynamicInputText("cusid", customerId);
 
 		log.info("STEP 4: Click button submit ");
-		deleteCustomerPageObject.clickSubmit();
+		deleteCustomerPageObject.clickDynamicSubmit("AccSubmit");
 		deleteCustomerPageObject.clickOkAlert();
-		
+
 		log.info("STEP 5: Verify message content : Customer deleted Successfully");
-		Assert.assertEquals(deleteCustomerPageObject.getTextAlert(), "Customer deleted Successfully");
+		verifyEquals(deleteCustomerPageObject.getTextAlert(), "Customer deleted Successfully");
 		deleteCustomerPageObject.clickOkAlert();
 
 	}

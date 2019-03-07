@@ -1,216 +1,89 @@
-2019-03-06 16:22:48,629 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-06 16:22:52,155 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-06 16:22:52,291 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-06 16:22:54,692 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-06 16:22:56,764 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-06 16:22:57,378 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-06 16:23:00,968 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Guru 99 site 
-2019-03-06 16:23:03,625 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Login with name and pass 
-2019-03-06 16:23:06,066 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:06,070 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Login with name and pass 
-2019-03-06 16:23:07,715 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill all info for customer form 
-2019-03-06 16:23:07,760 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:09,090 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:23:10,757 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:11,602 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open edit customer page 
-2019-03-06 16:23:12,886 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:12,886 INFO  [Register_Login_Excercise_9_testcase] STEP 2: enter customerID 
-2019-03-06 16:23:12,979 INFO  [Register_Login_Excercise_9_testcase] STEP 3: click submit button 
-2019-03-06 16:23:14,604 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill edit info customer 
-2019-03-06 16:23:14,644 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:15,565 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:23:17,102 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new account page 
-2019-03-06 16:23:18,434 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify new account page is displayed 
-2019-03-06 16:23:18,687 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:18,687 INFO  [Register_Login_Excercise_9_testcase] STEP 3: fill alls input for new account form 
-2019-03-06 16:23:19,419 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click submit form new account 
-2019-03-06 16:23:20,969 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify create new account successfull 
-2019-03-06 16:23:21,007 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:21,486 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current amount is correct 
-2019-03-06 16:23:21,555 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new deposite page 
-2019-03-06 16:23:22,796 INFO  [Register_Login_Excercise_9_testcase] STEP 2: verify deposit page is displayed 
-2019-03-06 16:23:23,197 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:23,197 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill information for deposit form 
-2019-03-06 16:23:23,529 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form deposit 
-2019-03-06 16:23:25,048 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify deposit successfull 
-2019-03-06 16:23:25,101 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:25,101 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:23:25,548 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new withdrawal page 
-2019-03-06 16:23:26,664 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify withdrawal page is displayed 
-2019-03-06 16:23:27,319 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:27,319 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in withdrawal form 
-2019-03-06 16:23:27,651 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form withdrawal 
-2019-03-06 16:23:29,237 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify withdraw successfull 
-2019-03-06 16:23:29,290 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:29,290 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:23:29,722 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new new fund tranfer page 
-2019-03-06 16:23:30,957 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify fund tranfer page is displayed 
-2019-03-06 16:23:30,999 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:31,026 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:31,026 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in fund tranfer form 
-2019-03-06 16:23:31,774 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form fund tranfer 
-2019-03-06 16:23:33,509 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify current balance is correct 
-2019-03-06 16:23:34,016 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Balance Enquiry page 
-2019-03-06 16:23:35,164 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify Balance Enquiry page is displayed 
-2019-03-06 16:23:35,217 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:35,217 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:23:35,310 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form Balance Enquiry 
-2019-03-06 16:23:37,067 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify check Balance Enquiry successfull 
-2019-03-06 16:23:37,120 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:37,120 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:23:37,552 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete Account page 
-2019-03-06 16:23:39,017 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:23:39,055 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:39,055 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:23:39,155 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:23:39,703 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Account Deleted Sucessfully 
-2019-03-06 16:23:40,274 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete customer page 
-2019-03-06 16:23:42,537 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:23:42,579 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:23:42,579 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Input customer ID 
-2019-03-06 16:23:43,030 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:23:43,216 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Customer deleted Successfully 
-2019-03-06 16:23:48,123 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-06 16:23:52,723 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-06 16:23:55,661 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-06 16:23:56,070 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-06 16:23:57,977 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-06 16:23:58,045 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-06 16:24:02,285 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Guru 99 site 
-2019-03-06 16:24:11,896 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Login with name and pass 
-2019-03-06 16:24:14,806 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:14,806 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Login with name and pass 
-2019-03-06 16:24:16,295 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill all info for customer form 
-2019-03-06 16:24:16,342 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:18,026 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:24:19,714 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:20,602 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open edit customer page 
-2019-03-06 16:24:21,735 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:21,735 INFO  [Register_Login_Excercise_9_testcase] STEP 2: enter customerID 
-2019-03-06 16:24:21,894 INFO  [Register_Login_Excercise_9_testcase] STEP 3: click submit button 
-2019-03-06 16:24:22,955 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill edit info customer 
-2019-03-06 16:24:23,000 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:23,897 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:24:25,262 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new account page 
-2019-03-06 16:24:26,389 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify new account page is displayed 
-2019-03-06 16:24:26,441 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:26,442 INFO  [Register_Login_Excercise_9_testcase] STEP 3: fill alls input for new account form 
-2019-03-06 16:24:26,837 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click submit form new account 
-2019-03-06 16:24:28,225 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify create new account successfull 
-2019-03-06 16:24:28,272 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:28,401 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current amount is correct 
-2019-03-06 16:24:28,464 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new deposite page 
-2019-03-06 16:24:29,429 INFO  [Register_Login_Excercise_9_testcase] STEP 2: verify deposit page is displayed 
-2019-03-06 16:24:29,521 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:29,522 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill information for deposit form 
-2019-03-06 16:24:29,894 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form deposit 
-2019-03-06 16:24:31,298 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify deposit successfull 
-2019-03-06 16:24:31,364 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:31,364 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:24:31,461 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new withdrawal page 
-2019-03-06 16:24:32,549 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify withdrawal page is displayed 
-2019-03-06 16:24:32,615 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:32,615 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in withdrawal form 
-2019-03-06 16:24:33,052 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form withdrawal 
-2019-03-06 16:24:34,640 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify withdraw successfull 
-2019-03-06 16:24:34,695 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:34,695 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:24:34,771 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new new fund tranfer page 
-2019-03-06 16:24:35,783 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify fund tranfer page is displayed 
-2019-03-06 16:24:35,840 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:35,875 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:35,875 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in fund tranfer form 
-2019-03-06 16:24:36,322 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form fund tranfer 
-2019-03-06 16:24:37,569 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify current balance is correct 
-2019-03-06 16:24:37,698 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Balance Enquiry page 
-2019-03-06 16:24:38,710 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify Balance Enquiry page is displayed 
-2019-03-06 16:24:38,761 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:38,761 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:24:38,876 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form Balance Enquiry 
-2019-03-06 16:24:40,077 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify check Balance Enquiry successfull 
-2019-03-06 16:24:40,136 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:40,136 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:24:40,211 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete Account page 
-2019-03-06 16:24:41,225 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:24:41,282 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:41,282 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:24:41,393 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:24:41,477 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Account Deleted Sucessfully 
-2019-03-06 16:24:41,787 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete customer page 
-2019-03-06 16:24:44,103 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:24:44,155 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:24:44,155 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Input customer ID 
-2019-03-06 16:24:44,272 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:24:44,353 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Customer deleted Successfully 
-2019-03-06 16:24:48,675 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-06 16:24:52,510 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-06 16:24:54,308 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-06 16:24:54,558 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-06 16:24:56,186 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-06 16:24:56,247 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-06 16:24:58,977 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Guru 99 site 
-2019-03-06 16:25:02,693 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Login with name and pass 
-2019-03-06 16:25:05,291 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:05,291 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Login with name and pass 
-2019-03-06 16:25:06,605 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill all info for customer form 
-2019-03-06 16:25:06,677 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:08,019 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:25:09,347 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:10,091 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open edit customer page 
-2019-03-06 16:25:11,401 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:11,402 INFO  [Register_Login_Excercise_9_testcase] STEP 2: enter customerID 
-2019-03-06 16:25:11,510 INFO  [Register_Login_Excercise_9_testcase] STEP 3: click submit button 
-2019-03-06 16:25:12,440 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill edit info customer 
-2019-03-06 16:25:12,515 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:13,408 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-06 16:25:15,497 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new account page 
-2019-03-06 16:25:16,820 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify new account page is displayed 
-2019-03-06 16:25:16,882 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:16,882 INFO  [Register_Login_Excercise_9_testcase] STEP 3: fill alls input for new account form 
-2019-03-06 16:25:17,201 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click submit form new account 
-2019-03-06 16:25:18,752 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify create new account successfull 
-2019-03-06 16:25:18,797 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:18,885 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current amount is correct 
-2019-03-06 16:25:19,006 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new deposite page 
-2019-03-06 16:25:20,334 INFO  [Register_Login_Excercise_9_testcase] STEP 2: verify deposit page is displayed 
-2019-03-06 16:25:20,368 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:20,368 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill information for deposit form 
-2019-03-06 16:25:20,721 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form deposit 
-2019-03-06 16:25:21,849 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify deposit successfull 
-2019-03-06 16:25:21,915 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:21,915 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:25:21,989 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new withdrawal page 
-2019-03-06 16:25:22,965 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify withdrawal page is displayed 
-2019-03-06 16:25:22,999 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:22,999 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in withdrawal form 
-2019-03-06 16:25:23,352 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form withdrawal 
-2019-03-06 16:25:24,788 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify withdraw successfull 
-2019-03-06 16:25:24,853 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:24,853 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:25:24,924 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new new fund tranfer page 
-2019-03-06 16:25:25,933 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify fund tranfer page is displayed 
-2019-03-06 16:25:25,968 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:25,989 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:25,989 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in fund tranfer form 
-2019-03-06 16:25:26,464 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form fund tranfer 
-2019-03-06 16:25:27,595 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify current balance is correct 
-2019-03-06 16:25:27,723 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Balance Enquiry page 
-2019-03-06 16:25:28,640 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify Balance Enquiry page is displayed 
-2019-03-06 16:25:28,703 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:28,703 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:25:28,818 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form Balance Enquiry 
-2019-03-06 16:25:29,747 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify check Balance Enquiry successfull 
-2019-03-06 16:25:29,785 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:29,785 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-06 16:25:29,887 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete Account page 
-2019-03-06 16:25:30,839 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:25:30,906 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:30,906 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-06 16:25:31,016 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:25:31,101 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Account Deleted Sucessfully 
-2019-03-06 16:25:31,417 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete customer page 
-2019-03-06 16:25:33,855 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-06 16:25:33,899 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-06 16:25:33,899 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Input customer ID 
-2019-03-06 16:25:34,006 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-06 16:25:34,089 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Customer deleted Successfully 
+2019-03-07 10:19:47,997 INFO  [Register_Login_Global] ========register================ 
+2019-03-07 10:19:47,999 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
+2019-03-07 10:19:55,456 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
+2019-03-07 10:19:57,828 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-03-07 10:19:58,077 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-03-07 10:19:59,511 INFO  [Register_Login_Global] STEP 4 : GET NAME 
+2019-03-07 10:19:59,600 INFO  [Register_Login_Global] STEP 5 : GET PASS 
+2019-03-07 10:20:01,215 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-07 10:20:06,132 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Guru 99 site 
+2019-03-07 10:20:11,942 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Login with name and pass 
+2019-03-07 10:20:14,704 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:14,707 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Login with name and pass 
+2019-03-07 10:20:16,103 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill all info for customer form 
+2019-03-07 10:20:16,146 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:17,764 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
+2019-03-07 10:20:19,653 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:19,774 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:19,900 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,032 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,203 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,315 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,435 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,529 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,634 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:20,743 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open edit customer page 
+2019-03-07 10:20:22,714 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:22,714 INFO  [Register_Login_Excercise_9_testcase] STEP 2: enter customerID 
+2019-03-07 10:20:22,828 INFO  [Register_Login_Excercise_9_testcase] STEP 3: click submit button 
+2019-03-07 10:20:23,858 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill edit info customer 
+2019-03-07 10:20:23,899 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:24,863 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
+2019-03-07 10:20:26,325 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new account page 
+2019-03-07 10:20:27,181 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify new account page is displayed 
+2019-03-07 10:20:27,219 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:27,219 INFO  [Register_Login_Excercise_9_testcase] STEP 3: fill alls input for new account form 
+2019-03-07 10:20:27,596 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click submit form new account 
+2019-03-07 10:20:29,022 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify create new account successfull 
+2019-03-07 10:20:29,057 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:29,149 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current amount is correct 
+2019-03-07 10:20:29,236 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:29,238 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new deposite page 
+2019-03-07 10:20:30,869 INFO  [Register_Login_Excercise_9_testcase] STEP 2: verify deposit page is displayed 
+2019-03-07 10:20:30,911 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:30,911 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill information for deposit form 
+2019-03-07 10:20:31,212 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form deposit 
+2019-03-07 10:20:32,599 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify deposit successfull 
+2019-03-07 10:20:32,648 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:32,648 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
+2019-03-07 10:20:32,728 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:32,729 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new withdrawal page 
+2019-03-07 10:20:34,152 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify withdrawal page is displayed 
+2019-03-07 10:20:34,195 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:34,195 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in withdrawal form 
+2019-03-07 10:20:34,487 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form withdrawal 
+2019-03-07 10:20:35,680 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify withdraw successfull 
+2019-03-07 10:20:35,746 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:35,747 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
+2019-03-07 10:20:35,819 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:35,821 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new new fund tranfer page 
+2019-03-07 10:20:37,582 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify fund tranfer page is displayed 
+2019-03-07 10:20:37,616 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:37,616 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in fund tranfer form 
+2019-03-07 10:20:37,969 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form fund tranfer 
+2019-03-07 10:20:39,307 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify current balance is correct 
+2019-03-07 10:20:39,391 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:39,392 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Balance Enquiry page 
+2019-03-07 10:20:40,778 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify Balance Enquiry page is displayed 
+2019-03-07 10:20:40,811 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:40,811 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
+2019-03-07 10:20:40,888 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form Balance Enquiry 
+2019-03-07 10:20:42,150 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify check Balance Enquiry successfull 
+2019-03-07 10:20:42,193 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:42,194 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
+2019-03-07 10:20:42,336 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:42,338 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete Account page 
+2019-03-07 10:20:43,459 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
+2019-03-07 10:20:43,530 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:43,530 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
+2019-03-07 10:20:43,632 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
+2019-03-07 10:20:43,718 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Account Deleted Sucessfully 
+2019-03-07 10:20:44,050 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:44,057 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete customer page 
+2019-03-07 10:20:45,830 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
+2019-03-07 10:20:45,873 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
+2019-03-07 10:20:45,873 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Input customer ID 
+2019-03-07 10:20:45,979 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
+2019-03-07 10:20:46,085 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Customer deleted Successfully 
+2019-03-07 10:20:46,471 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
+2019-03-07 10:20:47,329 INFO  [Register_Login_Excercise_9_testcase] ---------- QUIT BROWSER SUCCESS ---------- 

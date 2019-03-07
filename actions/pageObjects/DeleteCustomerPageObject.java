@@ -20,16 +20,6 @@ public class DeleteCustomerPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-
-	public boolean isDispledDeleteCusPage()   {
-		return isControlDisplayed(DeleteCustomerPageUI.DELETE_CUSTOMER_TITLE);
-	}
-	
-	public void clickSubmit() {
-		waitForControlVisible(DeleteCustomerPageUI.DELETE_CUSTOMER_BTN_SUBMIT);
-		clickToElement(DeleteCustomerPageUI.DELETE_CUSTOMER_BTN_SUBMIT);
-	}
-	
 	public void clickOkAlert()   {
 		acceptAlert();
 	}

@@ -17,18 +17,5 @@ public class EditCustomerPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
-	public boolean isDispledEditCustomerPage()  {
-		return isControlDisplayed(EditCustomerPageUI.CUSTOMER_TITLE);
-	}
-
-	public void inputCustomerID(String value) {
-		waitForControlVisible(EditCustomerPageUI.CUSTOMER_INPUT_NAME);
-		sendkeyToElement(EditCustomerPageUI.CUSTOMER_INPUT_NAME, value);
-	}
-
-	public void clickSubmit() {
-		waitForControlVisible(EditCustomerPageUI.CUSTOMER_BTN_SUBMIT);
-		clickToElement(EditCustomerPageUI.CUSTOMER_BTN_SUBMIT);
-	}
 
 }
