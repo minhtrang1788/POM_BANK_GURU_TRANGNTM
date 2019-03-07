@@ -1,9 +1,7 @@
-package com.bankguru.account;
-
+package com.bankguru.payment;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-
 
 import common.AbstractPage;
 import common.AbstractTest;
@@ -28,7 +26,7 @@ import org.testng.annotations.Parameters;
 
 import org.openqa.selenium.WebDriver;
 
-public class Register_Login_Excercise_9_testcase extends AbstractPage {
+public class Payment_Testcase_Review extends AbstractPage {
 
 	public static WebDriver driver;
 	private LoginPageObject loginPageObject;
@@ -133,7 +131,7 @@ public class Register_Login_Excercise_9_testcase extends AbstractPage {
 	@Test
 	public void TC_02_EditCustomer() throws InterruptedException {
 		log.info("STEP 1: Open edit customer page");
-		newCustomerPageObject.openDynamicObjectPage(driver, "Edit Customer");
+		successRegisterNewCustomerPageObject.openDynamicObjectPage(driver, "Edit Customer");
 		editCustomerPageObject = FactoryPageObject.editCustomerPageObject(driver);
 		verifyTrue(editCustomerPageObject.isDispledDynamicTitlePage(driver, "Edit Customer Form"));
 

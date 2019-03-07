@@ -13,7 +13,7 @@
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
 			<class	
-				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
+				name="com.bankguru.payment.Payment_Testcase_Review" />
 		</classes>
 	</test> 
 	<test name="Test on chrome">
@@ -22,7 +22,7 @@
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
 			<class	
-				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
+				name="com.bankguru.payment.Payment_Testcase_Review" />
 		</classes>
 	</test> 
 	<test name="Test on chromeheadless">
@@ -31,7 +31,7 @@
 			<class
 				name="com.bankguru.account.Register_Login_Global" /> 
 			<class	
-				name="com.bankguru.account.Register_Login_Excercise_9_testcase" />
+				name="com.bankguru.payment.Payment_Testcase_Review" />
 		</classes>
 	</test> 
 </suite> <!-- Suite -->

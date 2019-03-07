@@ -1,89 +1,24 @@
-2019-03-07 10:19:47,997 INFO  [Register_Login_Global] ========register================ 
-2019-03-07 10:19:47,999 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-07 10:19:55,456 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-07 10:19:57,828 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-07 10:19:58,077 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-07 10:19:59,511 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-07 10:19:59,600 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-07 10:20:01,215 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
-2019-03-07 10:20:06,132 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Guru 99 site 
-2019-03-07 10:20:11,942 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Login with name and pass 
-2019-03-07 10:20:14,704 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:14,707 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Login with name and pass 
-2019-03-07 10:20:16,103 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill all info for customer form 
-2019-03-07 10:20:16,146 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:17,764 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-07 10:20:19,653 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:19,774 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:19,900 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,032 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,203 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,315 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,435 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,529 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,634 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:20,743 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open edit customer page 
-2019-03-07 10:20:22,714 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:22,714 INFO  [Register_Login_Excercise_9_testcase] STEP 2: enter customerID 
-2019-03-07 10:20:22,828 INFO  [Register_Login_Excercise_9_testcase] STEP 3: click submit button 
-2019-03-07 10:20:23,858 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Fill edit info customer 
-2019-03-07 10:20:23,899 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:24,863 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Click submit button 
-2019-03-07 10:20:26,325 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new account page 
-2019-03-07 10:20:27,181 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify new account page is displayed 
-2019-03-07 10:20:27,219 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:27,219 INFO  [Register_Login_Excercise_9_testcase] STEP 3: fill alls input for new account form 
-2019-03-07 10:20:27,596 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click submit form new account 
-2019-03-07 10:20:29,022 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify create new account successfull 
-2019-03-07 10:20:29,057 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:29,149 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current amount is correct 
-2019-03-07 10:20:29,236 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:29,238 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new deposite page 
-2019-03-07 10:20:30,869 INFO  [Register_Login_Excercise_9_testcase] STEP 2: verify deposit page is displayed 
-2019-03-07 10:20:30,911 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:30,911 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill information for deposit form 
-2019-03-07 10:20:31,212 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form deposit 
-2019-03-07 10:20:32,599 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify deposit successfull 
-2019-03-07 10:20:32,648 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:32,648 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-07 10:20:32,728 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:32,729 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new withdrawal page 
-2019-03-07 10:20:34,152 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify withdrawal page is displayed 
-2019-03-07 10:20:34,195 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:34,195 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in withdrawal form 
-2019-03-07 10:20:34,487 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form withdrawal 
-2019-03-07 10:20:35,680 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify withdraw successfull 
-2019-03-07 10:20:35,746 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:35,747 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-07 10:20:35,819 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:35,821 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open new new fund tranfer page 
-2019-03-07 10:20:37,582 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify fund tranfer page is displayed 
-2019-03-07 10:20:37,616 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:37,616 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Fill all info in fund tranfer form 
-2019-03-07 10:20:37,969 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form fund tranfer 
-2019-03-07 10:20:39,307 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify current balance is correct 
-2019-03-07 10:20:39,391 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:39,392 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Balance Enquiry page 
-2019-03-07 10:20:40,778 INFO  [Register_Login_Excercise_9_testcase] STEP 2: Verify Balance Enquiry page is displayed 
-2019-03-07 10:20:40,811 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:40,811 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-07 10:20:40,888 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit form Balance Enquiry 
-2019-03-07 10:20:42,150 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify check Balance Enquiry successfull 
-2019-03-07 10:20:42,193 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:42,194 INFO  [Register_Login_Excercise_9_testcase] STEP 6: Verify current balance is correct 
-2019-03-07 10:20:42,336 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:42,338 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete Account page 
-2019-03-07 10:20:43,459 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-07 10:20:43,530 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:43,530 INFO  [Register_Login_Excercise_9_testcase] STEP 3: Input account number 
-2019-03-07 10:20:43,632 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-07 10:20:43,718 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Account Deleted Sucessfully 
-2019-03-07 10:20:44,050 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:44,057 INFO  [Register_Login_Excercise_9_testcase] STEP 1: Open Delete customer page 
-2019-03-07 10:20:45,830 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Verify Delete Account page is displayed 
-2019-03-07 10:20:45,873 INFO  [Register_Login_Excercise_9_testcase] ===PASSED=== 
-2019-03-07 10:20:45,873 INFO  [Register_Login_Excercise_9_testcase] STEP 2:Input customer ID 
-2019-03-07 10:20:45,979 INFO  [Register_Login_Excercise_9_testcase] STEP 4: Click button submit  
-2019-03-07 10:20:46,085 INFO  [Register_Login_Excercise_9_testcase] STEP 5: Verify message content : Customer deleted Successfully 
-2019-03-07 10:20:46,471 INFO  [Register_Login_Excercise_9_testcase] ===FAILED=== 
-2019-03-07 10:20:47,329 INFO  [Register_Login_Excercise_9_testcase] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-07 15:20:39,448 INFO  [Register_Login_Global] ========register================ 
+2019-03-07 15:20:39,454 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
+2019-03-07 15:20:49,483 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
+2019-03-07 15:20:49,962 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-03-07 15:20:52,940 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-03-07 15:20:55,203 INFO  [Register_Login_Global] STEP 4 : GET NAME 
+2019-03-07 15:20:55,305 INFO  [Register_Login_Global] STEP 5 : GET PASS 
+2019-03-07 15:20:56,288 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-07 15:22:09,857 INFO  [Register_Login_Global] ========register================ 
+2019-03-07 15:22:09,858 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
+2019-03-07 15:22:16,655 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
+2019-03-07 15:22:19,450 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-03-07 15:22:19,650 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-03-07 15:22:22,103 INFO  [Register_Login_Global] STEP 4 : GET NAME 
+2019-03-07 15:22:22,210 INFO  [Register_Login_Global] STEP 5 : GET PASS 
+2019-03-07 15:22:23,516 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-07 15:23:30,629 INFO  [Register_Login_Global] ========register================ 
+2019-03-07 15:23:30,629 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
+2019-03-07 15:23:37,728 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
+2019-03-07 15:23:40,677 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-03-07 15:23:41,254 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-03-07 15:23:43,745 INFO  [Register_Login_Global] STEP 4 : GET NAME 
+2019-03-07 15:23:43,844 INFO  [Register_Login_Global] STEP 5 : GET PASS 
+2019-03-07 15:23:45,030 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
