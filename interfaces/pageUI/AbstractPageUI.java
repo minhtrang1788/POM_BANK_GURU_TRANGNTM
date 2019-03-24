@@ -11,6 +11,7 @@ public class AbstractPageUI {
 	public static final String DYNAMIC_INPUT_TEXT = "//input[@name='%s']";
 	public static final String DYNAMIC_TEXT_SUCCESS_CUSTOMER_REGISTER = "//td[text()='%s']//following-sibling::td";
 	public static final String DYNAMIC_BTN_SUBMIT = "//input[@name='%s']";
+	public static final String DYNAMIC_TITLE_LIVE = "//h1[text()='%s']";
 
 	
 

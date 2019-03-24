@@ -1,24 +1,39 @@
-2019-03-07 15:20:39,448 INFO  [Register_Login_Global] ========register================ 
-2019-03-07 15:20:39,454 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-07 15:20:49,483 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-07 15:20:49,962 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-07 15:20:52,940 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-07 15:20:55,203 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-07 15:20:55,305 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-07 15:20:56,288 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
-2019-03-07 15:22:09,857 INFO  [Register_Login_Global] ========register================ 
-2019-03-07 15:22:09,858 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-07 15:22:16,655 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-07 15:22:19,450 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-07 15:22:19,650 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-07 15:22:22,103 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-07 15:22:22,210 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-07 15:22:23,516 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
-2019-03-07 15:23:30,629 INFO  [Register_Login_Global] ========register================ 
-2019-03-07 15:23:30,629 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
-2019-03-07 15:23:37,728 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
-2019-03-07 15:23:40,677 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
-2019-03-07 15:23:41,254 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
-2019-03-07 15:23:43,745 INFO  [Register_Login_Global] STEP 4 : GET NAME 
-2019-03-07 15:23:43,844 INFO  [Register_Login_Global] STEP 5 : GET PASS 
-2019-03-07 15:23:45,030 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-24 16:52:28,370 INFO  [Register_Login_Global] ========register================ 
+2019-03-24 16:52:28,371 INFO  [Register_Login_Global] CREAT NEW PAGE REGiSTER 
+2019-03-24 16:52:31,656 INFO  [Register_Login_Global] STEP 1 : CLICK TO REGiSTER 
+2019-03-24 16:52:31,836 INFO  [Register_Login_Global] STEP 2 : INPUT EMAILE IN REGISTER FORM 
+2019-03-24 16:52:33,918 INFO  [Register_Login_Global] STEP 3 : CLICK SUBMIT IN REGISTER FORM 
+2019-03-24 16:52:34,401 INFO  [Register_Login_Global] STEP 4 : GET NAME 
+2019-03-24 16:52:37,031 INFO  [Register_Login_Global] STEP 5 : GET PASS 
+2019-03-24 16:52:37,877 INFO  [Register_Login_Global] ---------- QUIT BROWSER SUCCESS ---------- 
+2019-03-24 16:52:43,769 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1 : GO TO LOGIN LINK 
+2019-03-24 16:52:49,586 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 2 : CLICK BUTTON LOGIN 
+2019-03-24 16:52:51,729 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1 : GO TO LOGIN LINK 
+2019-03-24 16:52:54,189 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 2 : CLICK BUTTON LOGIN 
+2019-03-24 16:52:56,455 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1 : GO TO LOGIN LINK 
+2019-03-24 16:53:00,066 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 2 : CLICK BUTTON LOGIN 
+2019-03-24 16:53:01,814 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open edit customer page 
+2019-03-24 16:53:01,821 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open edit customer page 
+2019-03-24 16:53:01,822 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open edit customer page 
+2019-03-24 16:53:01,826 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new account page 
+2019-03-24 16:53:01,829 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new account page 
+2019-03-24 16:53:01,832 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new account page 
+2019-03-24 16:53:01,834 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new deposite page 
+2019-03-24 16:53:01,837 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new deposite page 
+2019-03-24 16:53:01,840 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new deposite page 
+2019-03-24 16:53:01,842 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new withdrawal page 
+2019-03-24 16:53:01,845 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new withdrawal page 
+2019-03-24 16:53:01,848 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new withdrawal page 
+2019-03-24 16:53:01,850 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new new fund tranfer page 
+2019-03-24 16:53:01,855 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new new fund tranfer page 
+2019-03-24 16:53:01,856 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open new new fund tranfer page 
+2019-03-24 16:53:01,862 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Balance Enquiry page 
+2019-03-24 16:53:01,866 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Balance Enquiry page 
+2019-03-24 16:53:01,869 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Balance Enquiry page 
+2019-03-24 16:53:01,875 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete Account page 
+2019-03-24 16:53:01,880 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete Account page 
+2019-03-24 16:53:01,882 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete Account page 
+2019-03-24 16:53:01,897 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete customer page 
+2019-03-24 16:53:01,900 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete customer page 
+2019-03-24 16:53:01,908 INFO  [Register_Login_level11_RetryTestCaseFailed] STEP 1: Open Delete customer page 
+2019-03-24 16:53:02,395 INFO  [Register_Login_level11_RetryTestCaseFailed] ---------- QUIT BROWSER SUCCESS ---------- 

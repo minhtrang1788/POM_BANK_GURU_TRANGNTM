@@ -463,6 +463,12 @@ public class AbstractPage {
 		return isControlDisplayed(xpathTitle);
 
 	}	
+	
+	public boolean isDispledDynamicTitleInLivePage(WebDriver driver, String titlePage) {
+		String xpathTitle = String.format(AbstractPageUI.DYNAMIC_TITLE_LIVE, titlePage);
+		return isControlDisplayed(xpathTitle);
+
+	}	
 	public DepositPageObject openDepositPage(WebDriver driver) {
 		// TODO Auto-generated method stub
 		waitForControlVisible(AbstractPageUI.DEPOSIT_LINK);
@@ -600,6 +606,12 @@ public class AbstractPage {
 	public void clickDynamicSubmit(String name) {
 		String xpathText = String.format(AbstractPageUI.DYNAMIC_BTN_SUBMIT, name);
 		System.out.println("xpathText-----------"+xpathText);
+		waitForControlVisible(xpathText);
+		clickToElement(xpathText);
+	}
+	
+	public void clickDynamicLink(String name) {
+		String xpathText = String.format(AbstractPageUI.DYNAMIC_LINK, name);
 		waitForControlVisible(xpathText);
 		clickToElement(xpathText);
 	}

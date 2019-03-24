@@ -6,16 +6,20 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
         <listener class-name="common.ExtentReportListener"/>
+        <listener class-name="common.RetryListener"/>
 	</listeners>
 	 <test name="Test on firefox">
 		<parameter name="browser" value="firefox" />
+		<parameter name="newCustomer" value="./testdata/com/bankguru/account/NewCustomer.json" />
+		<parameter name="editCustomer" value="./testdata/com/bankguru/account/EditCustomer.json" />
 		<classes>
-			<class
-				name="com.bankguru.account.Register_Login_Global" /> 
 			<class	
-				name="com.bankguru.payment.Payment_Testcase_Review" />
+				name="com.bankguru.account.Register_Login_Global" />
+			<class	
+				name="com.bankguru.account.Register_Login_level11_RetryTestCaseFailed" />
 		</classes>
 	</test> 
+	<!-- 
 	<test name="Test on chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
@@ -34,4 +38,5 @@
 				name="com.bankguru.payment.Payment_Testcase_Review" />
 		</classes>
 	</test> 
+	 -->
 </suite> <!-- Suite -->

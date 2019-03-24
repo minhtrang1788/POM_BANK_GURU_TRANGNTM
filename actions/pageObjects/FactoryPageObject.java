@@ -60,4 +60,24 @@ public class FactoryPageObject {
 	public static DeleteCustomerPageObject newDeleteCustomerPageObject(WebDriver driver) {
 		return new DeleteCustomerPageObject(driver);
 	}
+	
+	public static LivePageObject newLivePageObject(WebDriver driver) {
+		return new LivePageObject(driver);
+	}
+	
+	public static MobilePageObject newMobilePageObject(WebDriver driver) {
+		return new MobilePageObject(driver);
+	}
+	
+	public static SingleMobilePageObject newSingleMobilePageObject(WebDriver driver) {
+		return new SingleMobilePageObject(driver);
+	}
+	
+	public static ShoppingCartPageObject newShoppingCartPageObject(WebDriver driver) {
+		return new ShoppingCartPageObject(driver);
+	}
+	
+	public static TVPageObject newTVPageObject(WebDriver driver) {
+		return new TVPageObject(driver);
+	}
 }
