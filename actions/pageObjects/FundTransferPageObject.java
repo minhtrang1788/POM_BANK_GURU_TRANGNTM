@@ -14,4 +14,7 @@ public class FundTransferPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
+	public boolean isDispledFundTransferPage () throws InterruptedException{
+		return isControlDisplayed(FundTransferPageUI.FUND_TRANSFER_TITLE);
+	}
 }

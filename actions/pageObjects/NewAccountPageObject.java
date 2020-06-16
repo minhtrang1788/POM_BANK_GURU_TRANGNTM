@@ -15,6 +15,10 @@ public class NewAccountPageObject extends AbstractPage {
 		setDriver(driverUse);
 	}
 
+	public boolean isDispledAccountPage() throws InterruptedException {
+		return isControlDisplayed(NewAccountPageUI.ACCOUNT_TITLE);
+	}
+
 	
 	public void selectAccountType() {
 		waitForControlVisible(NewAccountPageUI.ACCOUNT_SELECT_TYPE);

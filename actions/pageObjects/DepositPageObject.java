@@ -16,6 +16,10 @@ public class DepositPageObject extends AbstractPage {
 		driver = driverUse;
 		setDriver(driverUse);
 	}
+	
+	public boolean isDispledDepositPage() throws InterruptedException{
+		return isControlDisplayed(DepositPageUI.DEPOSIT_TITLE);
+	}
 
 	
 }

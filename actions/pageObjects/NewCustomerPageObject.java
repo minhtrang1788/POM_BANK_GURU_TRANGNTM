@@ -15,7 +15,13 @@ public class NewCustomerPageObject extends AbstractPage {
 		driver = driverUse;
 		setDriver(driverUse);
 	}
+	
+	public boolean isDispledCustomerPage() throws InterruptedException {
 
+		return isControlDisplayed(NewCustomerPageUI.CUSTOMER_TITLE);
+	}
+	
+	
 	public boolean isNotDispledHomePage() throws InterruptedException {
 
 		return isControlNotDisplayed(NewCustomerPageUI.WELCOME_LINK);
